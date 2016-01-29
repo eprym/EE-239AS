@@ -8,7 +8,7 @@ Created on Thu Jan 28 16:06:29 2016
 import numpy as np
 import pandas as pa
 
-def proprocessed_1():
+def preprocessed_1():
     network = pa.read_csv("network_backup_dataset.csv", header = 0)
     dict = {"Monday" : "1", "Tuesday":"2", "Wednesday":"3", "Thursday":"4", "Friday":"5", "Saturday":"6", "Sunday":"7"}
     for i in dict:

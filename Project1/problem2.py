@@ -5,6 +5,7 @@ Created on Thu Jan 28 16:06:29 2016
 @author: YuLiqiang
 """
 
+from math import sqrt
 import numpy as np
 import pandas as pa
 import matplotlib.pyplot as plt
@@ -14,8 +15,13 @@ from sklearn.preprocessing import normalize
 from sklearn import cross_validation
 from sklearn.cross_validation import KFold
 from sklearn.ensemble import RandomForestRegressor
-#from sklearn.neural_network import MLPRegressor
-from math import sqrt
+
+import pybrain
+from pybrain.datasets import SupervisedDataSet
+from pybrain.tools.shortcuts import buildNetwork
+from pybrain.supervised.trainers import BackpropTrainer
+from pybrain.structure.modules.neuronlayer import *
+
 
 def preprocessed_1(network):
     target_forgot=network.values[:,6:7]
@@ -118,22 +124,7 @@ def linearRegression(data, target, network):
     plt.show() 
     return RMSE_LINEAR
   
-#def neural_network(data, target, network):
-#    nn = MLPRegressor()
-#    kf = KFold(len(target), n_folds=10, shuffle=True, random_state=None)
-#    RMSE_NN = []
-#    for train_index, test_index in kf:
-#        data_train, data_test = data[train_index], data[test_index]
-#        target_train, target_test = target[train_index], target[test_index]
-#        nn = nn.fit(data_train, target_train)
-#        rmse_nn = sqrt(np.mean((nn.predict(data_test) - target_test) ** 2))
-#        RMSE_NN.append(rmse_nn)
-#    
-#    plt.figure()
-#    time = np.arange(1, 11)
-#    plt.plot(time, RMSE_NN, label = "RMSE in linear regression with 10-fold cv")
-#    plt.legend()
-#    plt.show()
+
     
 def randomforest(data, target, network):
     kf = KFold(len(target), 10, shuffle = True);
@@ -163,9 +154,28 @@ def randomforest(data, target, network):
         RMSE_FINAL.append(rmse_rfr)
     return RMSE_FINAL
 
+def neural_network(data, target, network):
+    DS = SupervisedDataSet(len(data[0]), 1)
+    nn = buildNetwork(len(data[0]), 4, 1, bias = True)
+    kf = KFold(len(target), 10, shuffle = True);
+    RMSE_NN = []
+    for train_index, test_index in kf:
+        data_train, data_test = data[train_index], data[test_index]
+        target_train, target_test = target[train_index], target[test_index]
+        for d,t in zip(data_train, target_train):
+            DS.addSample(d, t)
+        bpTrain = BackpropTrainer(nn,DS)
+        bpTrain.train()
+        p = []
+        for d_test in data_test:
+            p.append(nn.activate(d_test))
+        
+        rmse_nn = sqrt(np.mean((p - target_test)**2))
+        RMSE_NN.append(rmse_nn)
+        DS.clear()
+    print(np.mean(RMSE_NN))
             
 def main():
-    print (sklearn.__version__)
     network = pa.read_csv("network_backup_dataset.csv", header = 0)
     dict = {"Monday" : "1", "Tuesday":"2", "Wednesday":"3", "Thursday":"4", "Friday":"5", "Saturday":"6", "Sunday":"7"}
     for i in dict:
@@ -182,12 +192,13 @@ def main():
     data = np.concatenate((data1, data2), axis=1)
     target = network.values[:,5]
     #data = preprocessed_1(network)
-    linearRegression(data, target, network)
+    #linearRegression(data, target, network)
 #    RMSE_RFR = randomforest(data, target, network)
 #    plt.figure()
 #    plt.plot(range(1,len(RMSE_RFR)+1), RMSE_RFR)
 #    plt.show()
 #    print(np.mean(RMSE_RFR))
+    neural_network(data, target, network)
     
 
 

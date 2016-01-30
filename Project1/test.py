@@ -21,7 +21,7 @@ network_flow0=network[network["Work-Flow-ID"]=="work_flow_0"]
 #network["time"] = 
 network_tmp = network_flow0.groupby(["Week #", "Day of Week","Backup Start Time - Hour of Day"])["Size of Backup (GB)"].sum()
 network_tmp = network_tmp.values;
-plt.plot(network_tmp[0:120])
+plt.plot(network_tmp)
 #toplot = network[network['Week #'] <= 4]
 #plt.plot(np.arange(105), network_tmp["Size of Backup (GB)"]);
 #plt.plot((toplot["Week #"]-1)*7 + toplot["Day of Week"], toplot["Size of Backup (GB)"], marker = "*", linestyle="None")

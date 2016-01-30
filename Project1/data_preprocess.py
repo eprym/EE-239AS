@@ -8,17 +8,17 @@ Created on Thu Jan 28 16:06:29 2016
 import numpy as np
 import pandas as pa
 
-def preprocessed_1():
-    network = pa.read_csv("network_backup_dataset.csv", header = 0)
-    dict = {"Monday" : "1", "Tuesday":"2", "Wednesday":"3", "Thursday":"4", "Friday":"5", "Saturday":"6", "Sunday":"7"}
-    for i in dict:
-        network['Day of Week']=[s.replace(i, dict[i]) for s in network['Day of Week']]
-      
-    network['File Name']=[s.replace("File_","") for s in network['File Name']]
-    network['Work-Flow-ID']=[s.replace("work_flow_","") for s in network['Work-Flow-ID']]
-    network['Day of Week']=[int(s) for s in network['Day of Week']]
-    network['File Name']=[int(s) for s in network['File Name']]
-    network['Work-Flow-ID'] = [int(s) for s in network['Work-Flow-ID']]
+def preprocessed_1(network):
+#    network = pa.read_csv("network_backup_dataset.csv", header = 0)
+#    dict = {"Monday" : "1", "Tuesday":"2", "Wednesday":"3", "Thursday":"4", "Friday":"5", "Saturday":"6", "Sunday":"7"}
+#    for i in dict:
+#        network['Day of Week']=[s.replace(i, dict[i]) for s in network['Day of Week']]
+#      
+#    network['File Name']=[s.replace("File_","") for s in network['File Name']]
+#    network['Work-Flow-ID']=[s.replace("work_flow_","") for s in network['Work-Flow-ID']]
+#    network['Day of Week']=[int(s) for s in network['Day of Week']]
+#    network['File Name']=[int(s) for s in network['File Name']]
+#    network['Work-Flow-ID'] = [int(s) for s in network['Work-Flow-ID']]
 
     target_forgot=network.values[:,6:7]
     rowNO=len(network)

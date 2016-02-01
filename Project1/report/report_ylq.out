@@ -1,4 +1,6 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Data\040Preprocessing}{}% 2
-\BOOKMARK [1][-]{section.3}{Linear\040and\040Random\040Forest\040Regression}{}% 3
-\BOOKMARK [1][-]{section.4}{Neural\040Network}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Feature\040Binarization}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Pattern\040Detection}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Linear\040and\040Random\040Forest\040Regression}{}% 5
+\BOOKMARK [1][-]{section.4}{Neural\040Network}{}% 6

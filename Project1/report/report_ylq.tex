@@ -4,14 +4,16 @@
 \usepackage{graphicx}
 \begin{document}
 \tableofcontents
+\newpage
 \section{Introduction}
 In this report, we implemented some regression models to fit the data within two datasets, including the linear regression, random forest regression, neural network regression and polynomial regression. We made some comparisons between the prediction results of different models based on root mean squared error(RMSE) and the coefficient of determination($R^2$).
 Based on the statistics provided by models, we analyzed the significance of different features. In order to avoid overfitting, which often happens in the regression fitting problem, we implemented both cross-validation and regularization techniques. Moreover, since some of the features have no numerical meaning, we formatted them into binary features, which increase the number of features. \\
 \\
 The report is organized as follows : In section 2, we preprocessed the data and plotted the data to find some pattern. In section 3, The dataset was from a simulated traffic data on the backup system in a networkwe. We implemented both the linear regression model and random forest regression model to predict the copy size of the backup file and made some analysis and comparisons of the predictions. In section 4, we implemented the neural network model and polynomial regression model to fit the data and analyzed the impact of different parameters to the results. In section 5...
 \section{Data Preprocessing}
-After checking the data, there are seven features in the dataset named network\_ backup\_ dataset, including week, day of the week, backup start time, work flow ID, file name, size of backup and backup time. The target value is the size of backup, others are features. Therefore, first of all we need to transform non-numerical values into numerical values. However, consider "the day of the week" feature, "Tuesday" is not larger than "Monday", but "2" is larger than "1". So we need to make such kind of features into binary format. For instance, for "day of the week", we need to expand it into seven features, where it is 1 on the specified day and all the others 0. Finally, we have 64 features in total.\\
-\\
+\subsection{Feature Binarization}
+After checking the data, there are seven features in the dataset named network\_ backup\_ dataset, including week, day of the week, backup start time, work flow ID, file name, size of backup and backup time. The target value is the size of backup, others are features. Therefore, first of all we need to transform non-numerical values into numerical values. However, consider "the day of the week" feature, "Tuesday" is not larger than "Monday", but "2" is larger than "1". So we need to make such kind of features into binary format. For instance, for "day of the week", we need to expand it into seven features, where it is 1 on the specified day and all the others 0. Finally, we have 64 features in total.
+\subsection{Pattern Detection}
 In order the find the pattern, we plot the figure of the copy size over time. The independent variable is the "Start Time - Hour of Day", the dependent variable is the copy size. There are six sampling times in a day and 20 days as a period. So the x axis is from 1 to 120. The figure is shown in figure \ref{fig:start_time}.
 \begin{figure}[htbp]
 \centering
@@ -76,7 +78,7 @@ For 64 features, the p-value matrix is shown below.\\
 \label{fig:p64}
 \end{figure}
 \\
-For random forest regression, we initialize the model with parameters : number of trees 20, depth of trees 4. The average RMSE is 0.0297. After tuning the parameters, we have the best RMSE 0.00943. The best RMSE is shown in figure \ref{fig:rf}.\\
+For random forest regression, we initialize the model with parameters : number of trees 20, depth of trees 4, max features 64. The average RMSE is 0.0297. After tuning the parameters, we have the best RMSE 0.00943. The parameters are : number of trees 32, depth of trees 12, max features 64. The best RMSE is shown in figure \ref{fig:rf}.\\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{rf_rmse.png}
@@ -100,7 +102,7 @@ The prediction of the random forest model is shown in figure \ref{fig:r_pred}. W
 \label{fig:r_pred}
 \end{figure}
 \section{Neural Network}
-In the neural network model, we choose the feedforward network with the backpropagation trainer. The main parameters are the number of layers, the kind of hidden layers and the number of iteration before convergence. After lots of experience, we find that sigmoid layer is proper for hidden layers and linear layer is proper for the output layer. The optimal number of layers is 7. The RMSE reduces when the number of iteration is increasing, however it is too slow with large iteration number. So we set it to be 10. The best RMSE we can get is 0.827. The RMSE is shown in figure \ref{fig:nn}.
+In the neural network model, we choose the feedforward network with the backpropagation trainer. The main parameters are the number of layers, the kind of hidden layers and the number of iteration before convergence. After lots of experience, we find that sigmoid layer is proper for hidden layers and linear layer is proper for the output layer. The optimal number of layers is 7. The RMSE reduces when the number of iteration is increasing, however it is too slow with large iteration number. So we set it to be 10. The best RMSE we can get is 0.0827. The RMSE is shown in figure \ref{fig:nn}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{nn.png}

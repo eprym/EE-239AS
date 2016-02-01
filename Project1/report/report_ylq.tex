@@ -100,4 +100,11 @@ The prediction of the random forest model is shown in figure \ref{fig:r_pred}. W
 \label{fig:r_pred}
 \end{figure}
 \section{Neural Network}
+In the neural network model, we choose the feedforward network with the backpropagation trainer. The main parameters are the number of layers, the kind of hidden layers and the number of iteration before convergence. After lots of experience, we find that sigmoid layer is proper for hidden layers and linear layer is proper for the output layer. The optimal number of layers is 7. The RMSE reduces when the number of iteration is increasing, however it is too slow with large iteration number. So we set it to be 10. The best RMSE we can get is 0.827. The RMSE is shown in figure \ref{fig:nn}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{nn.png}
+\caption{The RMSE of neural network model}
+\label{fig:nn}
+\end{figure}
 \end{document}

@@ -37,14 +37,13 @@ plt.figure(1)
 
 for i in range(0,5):
     df_p=df[df['Work-Flow-ID']==i]
-    Train_set_x=df_p.drop('Size of Backup (GB)',1)
-    Train_set_x=df_p.drop('Work-Flow-ID',1)
     Train_set_y=df_p.ix[:,'Size of Backup (GB)']
+    Train_set_x=df_p.drop(['Size of Backup (GB)','Work-Flow-ID'],1)
     results=[]
     f10 = KFold(len(Train_set_x), n_folds=10, shuffle=True, random_state=None)
     for train_index, test_index in f10:
-        x_train, x_test = Train_set_x.ix[train_index,:], Train_set_x.ix[test_index,:]
-        y_train, y_test = Train_set_y[train_index], Train_set_y[test_index]
+        x_train, x_test = Train_set_x.iloc[train_index], Train_set_x.iloc[test_index]
+        y_train, y_test = Train_set_y.iloc[train_index], Train_set_y.iloc[test_index]
         x_train=x_train.dropna()
         x_test=x_test.dropna()
         y_test=y_test.dropna()
@@ -72,8 +71,8 @@ results5 = []
 results6 = []
 results7 = []
 for train_index, test_index in f10:
-      X_train, X_test = Train_set_x.ix[train_index,:], Train_set_x.ix[test_index,:]
-      y_train, y_test = Train_set_y[train_index], Train_set_y[test_index]
+      X_train, X_test = Train_set_x.iloc[train_index], Train_set_x.iloc[test_index]
+      y_train, y_test = Train_set_y.iloc[train_index], Train_set_y.iloc[test_index]
       lr.fit(X_train,y_train)
       error1=sqrt(np.mean((lr.predict(X_test) - y_test) ** 2))
       results1.append(error1)
@@ -119,12 +118,12 @@ for train_index, test_index in f10:
       lr.fit(X_train_7,y_train)
       error7=sqrt(np.mean((lr.predict(X_test_7) - y_test) ** 2))
       results7.append(error7)
-#plt.plot(test_times,results1,label='RMSE of Linear Regression')
+plt.plot(test_times,results1,label='RMSE of Linear Regression')
 plt.legend(fontsize=6)
 plt.title('Comparsion of Linear Regression between each workflows')
 plt.xlabel('Test Times')
 plt.ylabel('RMSE')
-plt.ylim(0,5e-15)
+plt.ylim(0,0.2)
 plt.show()
 plt.savefig('problem3-1')  
 
@@ -144,4 +143,4 @@ plt.ylabel('RMSE')
 plt.ylim(0.0,0.12)
 plt.show()
 plt.savefig('problem3-2')     
-      
+#      

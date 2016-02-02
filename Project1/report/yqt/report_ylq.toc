@@ -3,11 +3,14 @@
 \contentsline {subsection}{\numberline {2.1}Feature Binarization}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Pattern Detection}{2}{subsection.2.2}
 \contentsline {section}{\numberline {3}Linear and Random Forest Regression}{3}{section.3}
-\contentsline {section}{\numberline {4}Neural Network}{6}{section.4}
-\contentsline {section}{\numberline {5}Piece-wise Linear Regression and Polynomial Regression}{7}{section.5}
-\contentsline {subsection}{\numberline {5.1}Piece-wise Linear Regression}{7}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Polynomial Regression}{7}{subsection.5.2}
-\contentsline {section}{\numberline {6}Boston Datasets}{9}{section.6}
-\contentsline {section}{\numberline {7}Lasso \& Ridge Regularization}{9}{section.7}
+\contentsline {subsection}{\numberline {3.1}Linear Regression}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Random Forest Regression}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}The comparison between two models}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Neural Network}{7}{section.4}
+\contentsline {section}{\numberline {5}Piece-wise Linear Regression and Polynomial Regression}{8}{section.5}
+\contentsline {subsection}{\numberline {5.1}Piece-wise Linear Regression}{8}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Polynomial Regression}{8}{subsection.5.2}
+\contentsline {section}{\numberline {6}Boston Datasets}{8}{section.6}
+\contentsline {section}{\numberline {7}Lasso \& Ridge Regularization}{8}{section.7}
 \contentsline {subsection}{\numberline {7.1}Lasso Regularization}{9}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Ridge Regularization}{10}{subsection.7.2}

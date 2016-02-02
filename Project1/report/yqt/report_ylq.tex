@@ -9,7 +9,8 @@
 904592975, 504592374, 304588434} 
 \date{01-31-2016}
 \end{titlepage}
-\maketitle
+
+\maketitle
 \tableofcontents
 \newpage
 \section{Introduction}
@@ -36,6 +37,7 @@ From \ref{fig:start_time} we can see there is clearly a cycle between copy size 
 \label{fig:day}
 \end{figure}
 \section{Linear and Random Forest Regression}
+\subsection{Linear Regression}
 In the Linear Regression Model, we choose the copy size as the target variable and the other attributes as the features, the fit model is as follow
 \begin{equation*}
 \bar{Y} = X\alpha
@@ -84,7 +86,7 @@ For 64 features, the p-value matrix is shown below.\\
 \caption{p-value of 64 features}
 \label{fig:p64}
 \end{figure}
-\\
+\subsection{Random Forest Regression}
 For random forest regression, we initialize the model with parameters : number of trees 20, depth of trees 4, max features 64. The average RMSE is 0.0297. After tuning the parameters, we have the best RMSE 0.00943. The parameters are : number of trees 32, depth of trees 12, max features 64. The best RMSE is shown in figure \ref{fig:rf}.\\
 \begin{figure}[htbp]
 \centering
@@ -92,7 +94,7 @@ For random forest regression, we initialize the model with parameters : number o
 \caption{The best RMSE of random forest regression}
 \label{fig:rf}
 \end{figure}
-\\
+\subsection{The comparison between two models}
 The comparison between Linear Regression and Random Forest Regression is shown in figure \ref{fig:comp}. Random forest is a lot better than linear regression.\\
 \begin{figure}[htbp]
 \centering
@@ -135,7 +137,9 @@ By implying the PolynomialFeatures of Scikit-Learn, we can do polynomial regress
 \end{figure}
 \section{Boston Datasets}
 \section{Lasso \& Ridge Regularization}
-In machine learning, over fitting is likely to happens when a model is excessively complicated. Under this situation, the machine only memorizes the training data, instead of learning to predict the data from given features. In our problem, we have only about 500 tuple of data with 20 different features. Thus, the chance of our model to memorize data from these features is relatively high.Before, we use cross validation to limit the affection of over fitting during the assessing of a model. In this way, we can only determine if a given model is good or not. Instead, if we want to generate better learning models with little over fitting, we may use method as regularization.In regularization, we introduce a regularization term or so called loss function, which is usually a penalty on the complexity of our model. Therefore, it can improve the generalization ability of our model.
+In machine learning, over fitting is likely to happens when a model is excessively complicated. Under this situation, the machine only memorizes the training data, instead of learning to predict the data from given features. In our problem, we have only about 500 tuple of data with 20 different features. Thus, the chance of our model to memorize data from these features is relatively high.
+Before, we use cross validation to limit the affection of over fitting during the assessing of a model. In this way, we can only determine if a given model is good or not. Instead, if we want to generate better learning models with little over fitting, we may use method as regularization.
+In regularization, we introduce a regularization term or so called loss function, which is usually a penalty on the complexity of our model. Therefore, it can improve the generalization ability of our model.
 \subsection{Lasso Regularization}
 In Lasso regularization, the regularization term is considering the -norm of the regression coefficient vector. And the penalty function has the following form:
 \begin{equation*}
@@ -165,8 +169,18 @@ For a clearer comparison of the all RMSE values, we calculate the mean RMSE upon
 \begin{table}
 \begin{center}
 \caption{Compare between Lasso regression and Ridge regression }
-\label{tb}\begin{tabular}{|r|r|r|}
-\hlineValue of $\alpha$ & Lasso regularization & Ridge regularization\\\hline0.1&5.8639&4.7981\\0.01&4.9307&4.7686\\0.001&4.7861&4.7725\\\hline 	\end{tabular}\end{center}
+\label{tb}
+\begin{tabular}{|r|r|r|}
+\hline
+Value of $\alpha$ & Lasso regularization & Ridge regularization\\
+\hline
+0.1&5.8639&4.7981\\
+0.01&4.9307&4.7686\\
+0.001&4.7861&4.7725\\
+\hline 	
+\end{tabular}
+\end{center}
 \end{table}
-From the above table, we find out that for Lasso regularization, the RMSE is worsened but the sparsity of regression coefficients is obtained. And for Ridge regularization, we get the best RMSE result at α=0.01, which prove that with the control of over fitting, we may get a better model.
+From the above table, we find out that for Lasso regularization, the RMSE is worsened but the sparsity of regression coefficients is obtained. And for Ridge regularization, we get the best RMSE result at α=0.01, which prove that with the control of over fitting, we may get a better model.
+
 \end{document}

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+program for problem 2 int project 1
 Created on Thu Jan 28 16:06:29 2016
 
 @author: YuLiqiang
@@ -76,7 +77,7 @@ def preprocessed_1(network):
     return preprocessed
 
 # Compare the linear regression model and random forest regression model
-def linearRegression(data, target, network):
+def linear_randomForest_Regression(data, target, network):
     lr = linear_model.LinearRegression(normalize = True)
     rfr = RandomForestRegressor(n_estimators = 30,max_depth = 12, max_features='auto')
     kf = KFold(len(target), n_folds=10, shuffle=True, random_state=None)
@@ -119,10 +120,11 @@ def linearRegression(data, target, network):
     plt.scatter(time, network_time_predict_lr, s = 15, color = 'green', label = "predicted values with linear model")
     plt.xlabel('Time')
     plt.ylabel('Size of backup(GB)')
+    plt.ylim(-2,12)
     plt.legend()
 
     plt.figure()
-    plt.plot(time, network_time_predict_rfr, label = "predicted values with random forest tree model")
+    plt.plot(time[0:120], network_time_predict_rfr[0:120], label = "predicted values with random forest tree model")
     plt.legend()
 
     plt.figure()
@@ -136,13 +138,13 @@ def linearRegression(data, target, network):
   
 
 # Tuning the parameter of randomforest model, SLOW !!!   
-def randomforest(data, target, network):
+def randomforest_tuning(data, target, network):
     kf = KFold(len(target), 10, shuffle = True);
     RMSE_BEST = 10
     rfr_best = RandomForestRegressor(n_estimators = 30, max_features = len(data[0]), max_depth = 8)
-    for nEstimators in range(20,40,5):
-        for maxFeatures in range(len(data[0])/2, len(data[0])):
-            for maxDepth in range(4,15,2):
+    for nEstimators in range(29,31,1):
+        for maxFeatures in range(len(data[0])-1, len(data[0]+1)):
+            for maxDepth in range(11,13,1):
                 rfr = RandomForestRegressor(n_estimators = nEstimators, max_features = maxFeatures, max_depth = maxDepth)
                 RMSE_RFR = []
                 for train_index, test_index in kf:
@@ -162,13 +164,20 @@ def randomforest(data, target, network):
         rfr_best.fit(data_train, target_train)
         rmse_rfr = sqrt(np.mean((rfr_best.predict(data_test) - target_test) ** 2))
         RMSE_FINAL.append(rmse_rfr)
+    plt.figure()
+    plt.plot(range(1,len(RMSE_FINAL)+1), RMSE_FINAL)
+    plt.title("The best RMSE with random forest")
+    plt.xlabel("cross validation times")
+    plt.ylabel("RMSE")
+    plt.show()
+    print(np.mean(RMSE_FINAL))
     return RMSE_FINAL
 
 # Fit the data with neural network
 def neural_network(data, target, network):
     DS = SupervisedDataSet(len(data[0]), 1)
-    nn = buildNetwork(len(data[0]), 3, 1, bias = True)
-    kf = KFold(len(target), 2, shuffle = True);
+    nn = buildNetwork(len(data[0]), 7, 1, bias = True)
+    kf = KFold(len(target), 10, shuffle = True);
     RMSE_NN = []
     for train_index, test_index in kf:
         data_train, data_test = data[train_index], data[test_index]
@@ -176,8 +185,8 @@ def neural_network(data, target, network):
         for d,t in zip(data_train, target_train):
             DS.addSample(d, t)
         bpTrain = BackpropTrainer(nn,DS, verbose = True)
-        #bpTrain.trainEpochs(epochs = 2)
-        bpTrain.trainUntilConvergence(maxEpochs = 20)
+        #bpTrain.train()
+        bpTrain.trainUntilConvergence(maxEpochs = 10)
         p = []
         for d_test in data_test:
             p.append(nn.activate(d_test))
@@ -185,11 +194,17 @@ def neural_network(data, target, network):
         rmse_nn = sqrt(np.mean((p - target_test)**2))
         RMSE_NN.append(rmse_nn)
         DS.clear()
+    time = range(1,11)
+    figure()
+    plt.plot(time, RMSE_NN)
+    plt.xlabel('cross-validation time')
+    plt.ylabel('RMSE')
+    plt.show()
     print(np.mean(RMSE_NN))
 
 def neural_network_converg(data, target, network):
     DS = SupervisedDataSet(len(data[0]), 1)
-    nn = buildNetwork(len(data[0]), 3, 1, bias = True, hiddenclass = SigmoidLayer, outclass = LinearLayer) 
+    nn = buildNetwork(len(data[0]), 7, 1, bias = True, hiddenclass = SigmoidLayer, outclass = LinearLayer) 
     for d, t in zip(data, target):
          DS.addSample(d,t)
     Train, Test = DS.splitWithProportion(0.9)
@@ -198,13 +213,15 @@ def neural_network_converg(data, target, network):
     #target_train = Train['target']
     target_test = Test['target']
     bpTrain = BackpropTrainer(nn,Train, verbose = True)
-    bpTrain.trainUntilConvergence(maxEpochs = 100)
+    #bpTrain.train()
+    bpTrain.trainUntilConvergence(maxEpochs = 10)
     p = []
     for d_test in data_test:
         p.append(nn.activate(d_test))
         
     rmse_nn = sqrt(np.mean((p - target_test)**2)) 
-    print(rmse_nn)       
+    print(rmse_nn) 
+      
 def main():
     network = pa.read_csv("network_backup_dataset.csv", header = 0)
     dict = {"Monday" : "1", "Tuesday":"2", "Wednesday":"3", "Thursday":"4", "Friday":"5", "Saturday":"6", "Sunday":"7"}
@@ -223,14 +240,17 @@ def main():
     target = network.values[:,5]
     ### if you want to make the data into binary format, uncomment the line below
     data = preprocessed_1(network)
-#    rmse = linearRegression(data, target, network)
-#    print(np.mean(rmse))
-#    RMSE_RFR = randomforest(data, target, network)
-#    plt.figure()
-#    plt.plot(range(1,len(RMSE_RFR)+1), RMSE_RFR)
-#    plt.show()
-#    print(np.mean(RMSE_RFR))
-    neural_network_converg(data, target, network)
+    
+    ### compare the linear model with the random forest model
+    linear_randomForest_Regression(data, target, network)
+    
+    
+    ### Tuning the parameters of the random forest, SLOW !!!
+    #randomforest_tuning(data, target, network)
+    
+    
+    ### use the neural network model to fit the data
+    #neural_network(data, target, network)
     
 
 

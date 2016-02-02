@@ -1,0 +1,1 @@
+The program is based on python 2.7.11, numpy 1.10.1, matploblib 1.5.0, scikit-learn 0.17 and pybrain 0.31. There are six scripts which solve the five problems of the project 1. You can run them according to the script name and uncomment some lines if you want.

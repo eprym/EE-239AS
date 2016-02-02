@@ -1,16 +1,18 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data\040Preprocessing}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Feature\040Binarization}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Pattern\040Detection}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Linear\040and\040Random\040Forest\040Regression}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Linear\040Regression}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.2}{Random\040Forest\040Regression}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.3}{The\040comparison\040between\040two\040models}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Neural\040Network}{}% 9
-\BOOKMARK [1][-]{section.5}{Piece-wise\040Linear\040Regression\040and\040Polynomial\040Regression}{}% 10
-\BOOKMARK [2][-]{subsection.5.1}{Piece-wise\040Linear\040Regression}{section.5}% 11
-\BOOKMARK [2][-]{subsection.5.2}{Polynomial\040Regression}{section.5}% 12
-\BOOKMARK [1][-]{section.6}{Boston\040Datasets}{}% 13
-\BOOKMARK [1][-]{section.7}{Lasso\040&\040Ridge\040Regularization}{}% 14
-\BOOKMARK [2][-]{subsection.7.1}{Lasso\040Regularization}{section.7}% 15
-\BOOKMARK [2][-]{subsection.7.2}{Ridge\040Regularization}{section.7}% 16
+\BOOKMARK [1][-]{section.2}{Data Preprocessing}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Feature Binarization}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Pattern Detection}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Linear and Random Forest Regression}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Linear Regression}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Random Forest Regression}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{The comparison between two models}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Neural Network}{}% 9
+\BOOKMARK [1][-]{section.5}{Piece-wise Linear Regression and Polynomial Regression}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Piece-wise Linear Regression}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Polynomial Regression}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Linear and Polynomial Regression of Boston Datasets}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Linear Regression}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Polynomial Regression}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Lasso \046 Ridge Regularization}{}% 16
+\BOOKMARK [2][-]{subsection.7.1}{Lasso Regularization}{section.7}% 17
+\BOOKMARK [2][-]{subsection.7.2}{Ridge Regularization}{section.7}% 18

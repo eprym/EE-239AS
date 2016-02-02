@@ -1,55 +1,55 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2015.10.13)  1 FEB 2016 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.29)  1 FEB 2016 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report_ylq.tex
 (./report_ylq.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count87
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count88
+\leftroot@=\count89
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count90
+\DOTSCASE@=\count91
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -58,15 +58,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
 \tag@help=\toks15
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
 \andhelp@=\toks16
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
@@ -81,14 +81,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
@@ -99,7 +99,7 @@ Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -110,10 +110,9 @@ Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -130,29 +129,29 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen112
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count102
+\Hy@SavedSpaceFactor=\count101
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -162,15 +161,15 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count103
+\c@Hy@tempcnt=\count102
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen113
-\Fld@menulength=\count104
+\Fld@menulength=\count103
 \Field@Width=\dimen114
 \Fld@charsize=\dimen115
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -182,57 +181,42 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count105
-\c@Item=\count106
-\c@Hfootnote=\count107
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
 )
 
-Package hyperref Message: Driver (autodetected): hxetex.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2012/11/06 v6.83m Hyperref driver for XeTeX
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box28
-\c@Hy@AnnotLevel=\count108
-\HyField@AnnotCount=\count109
-\Fld@listcount=\count110
-\c@bookmark@seq@number=\count111
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
-(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
-
-(rerunfilecheck)             Therefore file contents cannot be checked efficien
-tly
-(rerunfilecheck)             and the loading of the package is aborted.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
 \Hy@SectionHShift=\skip46
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xetex-def/xetex.def
-File: xetex.def 2014/04/28 v4.01 LaTeX color/graphics driver for XeTeX (RRM/JK)
-
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count109
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
@@ -254,18 +238,16 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box28
 Package hyperref Info: Link coloring OFF on input line 5.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count112
+\c@section@level=\count110
 )
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
@@ -275,95 +257,240 @@ LaTeX Info: Redefining \nameref on input line 5.
 \@outlinefile=\write3
 \openout3 = `report_ylq.out'.
 
- (./report_ylq.toc)
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count111
+\scratchdimen=\dimen118
+\scratchbox=\box29
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen119
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./report_ylq.toc)
 \tf@toc=\write4
 \openout4 = `report_ylq.toc'.
 
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
-File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
-
-)
-[1
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 17--21
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
  []
 
-File: pattern_start.png Graphic file (type QTm)
-<use  "pattern_start.png" >
-File: pattern_week.png Graphic file (type QTm)
- <use  "pattern_week.png" > [2] [3]
-File: rmse_linear.png Graphic file (type QTm)
+<pattern_start.png, id=110, 578.16pt x 433.62pt>
+File: pattern_start.png Graphic file (type png)
+ <use pattern_start.png>
+Package pdftex.def Info: pattern_start.png used on input line 29.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
 
-<use  "rmse_linear.png" >
-Missing character: There is no ‚Äú in font cmr10!
-Missing character: There is no ‚Äù in font cmr10!
-Missing character: There is no ‚Äú in font cmr10!
-Missing character: There is no ‚Äù in font cmr10!
-File: actual_pred.png Graphic file (type QTm)
- <use  "actual_pred.png" >
-File: residual.png Graphic file (type QTm)
- <use  "residual.png" >
-File: pvalue-6.png Graphic file (type QTm)
+<pattern_week.png, id=114, 578.16pt x 433.62pt>
+File: pattern_week.png Graphic file (type png)
+ <use pattern_week.png>
+Package pdftex.def Info: pattern_week.png used on input line 36.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+ [3]
+[4 <./pattern_start.png> <./pattern_week.png>]
+<rmse_linear.png, id=130, 578.16pt x 433.62pt>
+File: rmse_linear.png Graphic file (type png)
+ <use rmse_linear.png>
+Package pdftex.def Info: rmse_linear.png used on input line 53.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
 
-<use  "pvalue-6.png" >
-File: pvalue-64.png Graphic file (type QTm)
- <use  "pvalue-64.png" >
-Overfull \hbox (2.97287pt too wide) in paragraph at lines 48--89
+<actual_pred.png, id=133, 578.16pt x 433.62pt>
+File: actual_pred.png Graphic file (type png)
+ <use actual_pred.png>
+Package pdftex.def Info: actual_pred.png used on input line 62.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+
+<residual.png, id=134, 578.16pt x 433.62pt>
+File: residual.png Graphic file (type png)
+ <use residual.png>
+Package pdftex.def Info: residual.png used on input line 68.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+
+<pvalue-6.png, id=136, 501.875pt x 29.10875pt>
+File: pvalue-6.png Graphic file (type png)
+ <use pvalue-6.png>
+Package pdftex.def Info: pvalue-6.png used on input line 77.
+(pdftex.def)             Requested size: 276.00105pt x 16.00896pt.
+
+<pvalue-64.png, id=137, 515.9275pt x 224.84pt>
+File: pvalue-64.png Graphic file (type png)
+ <use pvalue-64.png>
+Package pdftex.def Info: pvalue-64.png used on input line 86.
+(pdftex.def)             Requested size: 276.00105pt x 120.28307pt.
+
+Overfull \hbox (2.97287pt too wide) in paragraph at lines 49--90
 \OT1/cmr/m/n/10 In or-der to avoid the over-fit-ting prob-lem, we im-ple-mented
  10-fold cross-validation
  []
 
-[4]
-File: rf_rmse.png Graphic file (type QTm)
- <use  "rf_rmse.png" >
-File: compare.png Graphic file (type QTm)
- <use  "compare.png" >
-File: random_pred.png Graphic file (type QTm)
- <use  "random_pred.png" >
-File: nn.png Graphic file (type QTm)
+[5 <./rmse_linear.png> <./actual_pred.png> <./residual.png>]
+<rf_rmse.png, id=150, 578.16pt x 433.62pt>
+File: rf_rmse.png Graphic file (type png)
+ <use rf_rmse.png>
+Package pdftex.def Info: rf_rmse.png used on input line 94.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
 
-<use  "nn.png" > [5] [6]
-File: wf.png Graphic file (type QTm)
- <use  "wf.png" > [7]
-File: pr1.png Graphic file (type QTm)
- <use  "pr1.png" > [8]
-Missing character: There is no Œ± in font cmr10!
-File: lar.png Graphic file (type QTm)
+<compare.png, id=152, 578.16pt x 433.62pt>
+File: compare.png Graphic file (type png)
+ <use compare.png>
+Package pdftex.def Info: compare.png used on input line 102.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
 
-<use  "lar.png" > [9]
-Missing character: There is no Œ± in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 161.
+<random_pred.png, id=154, 578.16pt x 433.62pt>
+File: random_pred.png Graphic file (type png)
+ <use random_pred.png>
+Package pdftex.def Info: random_pred.png used on input line 110.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+
+<nn.png, id=156, 578.16pt x 433.62pt>
+File: nn.png Graphic file (type png)
+ <use nn.png>
+Package pdftex.def Info: nn.png used on input line 118.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+ [6 <./pvalue-6.png> <./pvalue-64.png>] [7 <./rf_rmse.png> <./compare.png>]
+<wf.png, id=177, 578.16pt x 433.62pt>
+File: wf.png Graphic file (type png)
+ <use wf.png>
+Package pdftex.def Info: wf.png used on input line 127.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+ [8 <./random_pred.png> <./nn.png>] <pr1.png, id=186, 578.16pt x 433.62pt>
+File: pr1.png Graphic file (type png)
+ <use pr1.png>
+Package pdftex.def Info: pr1.png used on input line 135.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+
+<RMSEs.png, id=188, 578.16pt x 430.7292pt>
+File: RMSEs.png Graphic file (type png)
+ <use RMSEs.png>
+Package pdftex.def Info: RMSEs.png used on input line 144.
+(pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
+
+<fitted_actual.png, id=191, 578.16pt x 430.7292pt>
+File: fitted_actual.png Graphic file (type png)
+ <use fitted_actual.png>
+Package pdftex.def Info: fitted_actual.png used on input line 151.
+(pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
+
+<residual_fitted.png, id=192, 578.16pt x 430.7292pt>
+File: residual_fitted.png Graphic file (type png)
+ <use residual_fitted.png>
+Package pdftex.def Info: residual_fitted.png used on input line 157.
+(pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
+Missing character: There is no Œ in font cmr10!
+Missing character: There is no ± in font cmr10!
+
+<feature13.png, id=195, 291.0072pt x 38.0622pt>
+File: feature13.png Graphic file (type png)
+ <use feature13.png>
+Package pdftex.def Info: feature13.png used on input line 164.
+(pdftex.def)             Requested size: 207.0021pt x 27.07486pt.
+
+<feature21.png, id=196, 292.4526pt x 56.3706pt>
+File: feature21.png Graphic file (type png)
+ <use feature21.png>
+Package pdftex.def Info: feature21.png used on input line 170.
+(pdftex.def)             Requested size: 207.0021pt x 39.90125pt.
+ [9 <./wf.png>] [10 <./pr1.png> <./RMSEs.png>]
+<problem4-2.png, id=213, 578.16pt x 433.62pt>
+File: problem4-2.png Graphic file (type png)
+ <use problem4-2.png>
+Package pdftex.def Info: problem4-2.png used on input line 178.
+(pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
+ [11 <./fitted_actual.png> <./residual_fitted.png>] [12 <./feature13.png> <./fe
+ature21.png> <./problem4-2.png>]
+Missing character: There is no Œ in font cmr10!
+Missing character: There is no ± in font cmr10!
+ <lar.png, id=232, 289.08pt x 215.3646pt>
+File: lar.png Graphic file (type png)
+ <use lar.png>
+Package pdftex.def Info: lar.png used on input line 194.
+(pdftex.def)             Requested size: 207.0021pt x 154.21454pt.
+Missing character: There is no Œ in font cmr10!
+Missing character: There is no ± in font cmr10!
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
-Missing character: There is no Œ± in font cmr10!
-File: rr.png Graphic file (type QTm)
- <use  "rr.png" >
-Missing character: There is no Œ± in font cmr10!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
+Missing character: There is no Œ in font cmr10!
+Missing character: There is no ± in font cmr10!
 
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+<rr.png, id=234, 416.757pt x 310.761pt>
+File: rr.png Graphic file (type png)
+ <use rr.png>
+Package pdftex.def Info: rr.png used on input line 207.
+(pdftex.def)             Requested size: 207.0021pt x 154.35588pt.
+Missing character: There is no Œ in font cmr10!
+Missing character: There is no ± in font cmr10!
+ [13 <./lar.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+ [14 <./rr.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./report_ylq.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 186.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 186.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package rerunfilecheck Info: File `report_ylq.out' has not changed.
+(rerunfilecheck)             Checksum: 70A23946998D6153EE3C673A914773A1;1246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 8691 strings out of 493734
- 119985 string characters out of 6146347
- 188930 words of memory out of 5000000
- 11973 multiletter control sequences out of 15000+600000
- 9383 words of font info for 34 fonts, out of 8000000 for 9000
- 1328 hyphenation exceptions out of 8191
- 29i,9n,45p,844b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 5854 strings out of 493054
+ 84973 string characters out of 6134760
+ 171706 words of memory out of 5000000
+ 9268 multiletter control sequences out of 15000+600000
+ 9023 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 29i,9n,28p,844b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report_ylq.pdf (14 pages, 947279 bytes).
+PDF statistics:
+ 293 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on report_ylq.pdf (11 pages).

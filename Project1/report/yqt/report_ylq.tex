@@ -4,13 +4,14 @@
 \usepackage{graphicx}
 \begin{document}
 \begin{titlepage}
-\title{EE\quad239AS \\Special Topics in Signals and Systems\\Project 1\\Regression Analysis\\Winter 2016} 
+\title{EE 239AS \\Special Topics in Signals and Systems\\Project 1\\Regression Analysis\\Winter 2016} 
 \author{Liqiang YU, Kaiming WANG and Jun FENG\\
 904592975, 504592374, 304588434} 
 \date{01-31-2016}
 \end{titlepage}
 
 \maketitle
+\newpage
 \tableofcontents
 \newpage
 \section{Introduction}
@@ -132,10 +133,52 @@ By implying the PolynomialFeatures of Scikit-Learn, we can do polynomial regress
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{pr1.png}
-\caption{Piecewise Linear Regression}
+\caption{Polynomial Regression}
 \label{fig:pr1}
 \end{figure}
-\section{Boston Datasets}
+\section{Linear and Polynomial Regression of Boston Datasets}
+\subsection{Linear Regression}
+Similar as the linear part of Chapter 3, we also implemented 10-fold cross validation here. And the RMSEs are shown in Figure \ref{fig:RMSEs}, and the mean of them is about 4.7403.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{RMSEs.png}
+\caption{Linear Regression of Boston}
+\label{fig:RMSEs}
+\end{figure}
+To evaluate how well our model fit the data, we provide two graphs. The first one is shown as Figure \ref{fig:fitted_actual}, which is the scattered plot of actual and fitted MEDV values. And we can see that most of them overlaps. The other graph is the residuals versus fitted values, showed in Figure \ref{fig:residual_fitted}. Since most of them are clustered around 0 of y-axis, we are confirmed that our model fits the data quite well.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{fitted_actual.png}
+\caption{Scattered Plot of Actual and Fitted MEDV Values}
+\label{fig:fitted_actual}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{residual_fitted.png}
+\caption{Residuals Versus Fitted Values}
+\label{fig:residual_fitted}
+\end{figure}
+For the analyzation of significance of different features, we still use the p-value as before.  P-value of the 13 features are shown in Figure \ref{fig:feature13}, while those of 21 features are shown in Figure \ref{fig:feature21}. From them, we know that the three smallest p-values are the sixth, the third last and the last, which means that the corresponding features are the most significant ones. Particularly, they are the RM, PTRATIO and LSTAT. Later, when we were using the Lasso regression model and the α parameter is set as 0.1, we noticed that the only regression coefficients remain nonzero are exactly corresponding to those mentioned above, which means only the most important features are kept.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{feature13.png}
+\caption{P-value of the 13 Features}
+\label{fig:feature13}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{feature21.png}
+\caption{P-value of the 21 Features}
+\label{fig:feature21}
+\end{figure}
+\subsection{Polynomial Regression}
+We do the same polynomial regression on target of Boston dataset, just like in part 3, this time the optimal degree of fit is just 2, which is illustrated in Figure \ref{fig:problem4-2}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{problem4-2.png}
+\caption{Polynomial Regression}
+\label{fig:problem4-2}
+\end{figure}
 \section{Lasso \& Ridge Regularization}
 In machine learning, over fitting is likely to happens when a model is excessively complicated. Under this situation, the machine only memorizes the training data, instead of learning to predict the data from given features. In our problem, we have only about 500 tuple of data with 20 different features. Thus, the chance of our model to memorize data from these features is relatively high.
 Before, we use cross validation to limit the affection of over fitting during the assessing of a model. In this way, we can only determine if a given model is good or not. Instead, if we want to generate better learning models with little over fitting, we may use method as regularization.

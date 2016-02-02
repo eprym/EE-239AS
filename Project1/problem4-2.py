@@ -13,7 +13,6 @@ from math import sqrt
 from math import log10
 from sklearn.cross_validation import KFold
 from sklearn import linear_model
-#from sklearn.cross_validation import cross_val_predict
 #import the csv file
 boston = datasets.load_boston()
 
@@ -30,7 +29,7 @@ Train_set_x=pd.DataFrame(boston.data,index=None)
 Train_set_y=pd.DataFrame(boston.target,index=None)
 #split the data into 10 folds
 f10 = KFold(len(Train_set_x), n_folds=10, shuffle=True, random_state=None)
-# result1 linear,result2 poly-2,result3 poly-3,result4 poly-4,result5 poly-5,result6 poly-6,result7 poly-7  
+# this is polynomial regression of boston regression 
 
 for i in range(1,8):
     results = []
@@ -53,13 +52,3 @@ plt.ylabel('RMSE')
 plt.ylim(0.0,7)
 plt.show()
 plt.savefig('problem4-2') 
-
-
-#predicted = cross_val_predict(lr, Train_set_x, Train_set_y, cv=10)
-#
-#fig, ax = plt.subplots()
-#ax.scatter(Train_set_y, predicted)
-#ax.plot([Train_set_y.min(), Train_set_y.max()], [Train_set_y.min(), Train_set_y.max()], 'k--', lw=4)
-#ax.set_xlabel('Measured')
-#ax.set_ylabel('Predicted')
-#plt.show()

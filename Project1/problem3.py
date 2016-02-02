@@ -34,7 +34,7 @@ lr = linear_model.LinearRegression()
 
 test_times = range(0,10)
 plt.figure(1)
-
+#this is piecewise regression and cross-validation
 for i in range(0,5):
     df_p=df[df['Work-Flow-ID']==i]
     Train_set_y=df_p.ix[:,'Size of Backup (GB)']
@@ -50,13 +50,12 @@ for i in range(0,5):
         y_train=y_train.dropna()
         lr.fit(x_train,y_train)
         error=sqrt(np.mean((lr.predict(x_test) - y_test) ** 2))
-        print error
         results.append(error)
     plt.plot(test_times,results,label=('RMSE of Linear Regression-Workflow'+str(i)))
 
     
     
-
+# this is polynomial regression degree is up to 7
 #divide the data into two sets
 Train_set_x=df.drop('Size of Backup (GB)',1)
 Train_set_y=df.ix[:,'Size of Backup (GB)']

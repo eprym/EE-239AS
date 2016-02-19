@@ -16,6 +16,7 @@ categories = ['comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardw
                 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey']
 
 train = f20(subset='train', shuffle = True, random_state = 42)
+data=train.data
 target = train.target
 bins = np.linspace(-0.5, len(categories)-0.5, len(categories)+1)
 bins_total = np.linspace(-0.5, 19.5, 21)
@@ -29,6 +30,11 @@ tfidf_transform = TfidfTransformer()
 tfidf_vect = tfidf_transform.fit_transform(train_vect)
 print(tfidf_vect.shape)
 
-
+a=np.ndarray(shape=(20,11314),dtype=unicode)
+i=0;
 for cat in train.target_names:
+    cur=f20(subset='train',categories=cat,shuffle=True,random_state=42)
+    a[i,]=cur.data
+    ++i
     print len(train[cat].data)
+    

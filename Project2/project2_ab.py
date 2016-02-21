@@ -55,3 +55,22 @@ vectorizer = StemmedTfidfVectorizer(
 vector = vectorizer.fit_transform(train.data)
 tfidf=vector.toarray()
 print 'number of terms: '+str(len(tfidf[0]))
+cat={0:'alt.atheism',1:'alt.atheism',2:'comp.graphics',3:'comp.os.ms-windows.misc',4:'comp.sys.ibm.pc.hardware',5:'comp.windows.x',6:'misc.forsale',7:'rec.autos',8:'rec.motorcycles',9:'rec.sport.baseball',10:'rec.sport.hockey',11:'sci.crypt',12:'sci.electronics',13:'sci.med',14:'sci.space',15:'soc.religion.christian',16:'talk.politics.guns',17:'talk.politics.mideast',18:'talk.politics.misc',19:'talk.religion.misc'
+}
+number_of_document=[]
+raw_data=[]
+for i in range(0,20):
+    tmp_data=f20(subset='train',categories=[cat[i]], shuffle = True, random_state = 42)
+    number_of_document.append(len(tmp_data.data))
+    raw_data.append(tmp_data.data)
+intend_number=min(number_of_document)
+for i in range(0,20):
+    print len(raw_data[i])
+    raw_data[i]=raw_data[i][0:intend_number]
+    print len(raw_data[i])
+new_data=[]
+new_target=[]
+for i in range(0,20):
+    for j in range(0,intend_number):
+        new_data.append(raw_data[i][j])
+        new_target.append(i)

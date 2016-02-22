@@ -14,7 +14,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD as TSVD
 from sklearn.svm import SVC
-from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import precision_recall_curve, precision_score, recall_score
 from sklearn.metrics import confusion_matrix
 import nltk.stem
 
@@ -95,11 +95,14 @@ svc_ovoc_predict=svc_ovoc.predict(svm_test_data)
 #precision, recall, thresholds = precision_recall_curve(svm_test_tag, svc_ovoc_predict)
 #BernoulliNB(alpha=1.0, binarize=0.5, class_prior=None, fit_prior=True)
 score=svc_ovoc.score(svm_test_data,svm_test_tag)
+precision = precision_score(svm_test_tag, svc_ovoc_predict, average = 'weighted')
+recall = recall_score(svm_test_tag, svc_ovoc_predict, average = 'weighted')
 print "1 VS 1 SVC"
 print "confusion matrix:","\n",confusion_matrix(svm_test_tag, svc_ovoc_predict)
 print "score=",score
-#print "precision=",precision
-#print "recall=",recall
+print "precision=", precision
+print "recall=", recall
+print '\n'
 
 svc = SVC(kernel='rbf',C = 100)
 svc_ovrc=OVRC(svc)
@@ -108,9 +111,14 @@ svc_ovrc_predict=svc_ovrc.predict(svm_test_data)
 #precision, recall, thresholds = precision_recall_curve(svm_test_tag, svc_ovoc_predict)
 #BernoulliNB(alpha=1.0, binarize=0.5, class_prior=None, fit_prior=True)
 score=svc_ovrc.score(svm_test_data,svm_test_tag)
+precision = precision_score(svm_test_tag, svc_ovrc_predict, average = 'weighted')
+recall = recall_score(svm_test_tag, svc_ovrc_predict, average = 'weighted')
+
 print "1 VS Rest SVC"
 print "confusion matrix:","\n",confusion_matrix(svm_test_tag, svc_ovrc_predict)
 print "score=",score
+print "precision=", precision
+print "recall=", recall
 print '\n'
 
 #
@@ -118,9 +126,13 @@ gnb = GaussianNB()
 gnb.fit(svm_train_data, svm_train_tag)
 gnb_predict=gnb.predict(svm_test_data)
 score = gnb.score(svm_test_data, svm_test_tag)
+precision = precision_score(svm_test_tag, gnb_predict, average = 'weighted')
+recall = recall_score(svm_test_tag, gnb_predict, average = 'weighted')
 print "GaussianNB"
 print "confusion matrix:","\n",confusion_matrix(svm_test_tag, gnb_predict)
 print "score=",score
+print "precision=", precision
+print "recall=", recall
 print '\n'
 
 #mnb = MultinomialNB()
@@ -136,9 +148,13 @@ bnb_predict=bnb.predict(svm_test_data)
 #precision, recall, thresholds = precision_recall_curve(svm_test_tag, ovoc_predict)
 #BernoulliNB(alpha=1.0, binarize=0.5, class_prior=None, fit_prior=True)
 score=bnb.score(svm_test_data,svm_test_tag)
+precision = precision_score(svm_test_tag, bnb_predict, average = 'weighted')
+recall = recall_score(svm_test_tag, bnb_predict, average = 'weighted')
 print "BernoulliNB"
 print "confusion matrix:","\n",confusion_matrix(svm_test_tag, bnb_predict)
 print "score=",score
+print "precision=", precision
+print "recall=", recall
 print '\n'
 #print "precision=",precision[1]
 #print "recall=",recall[1]

@@ -17,7 +17,7 @@ from matplotlib.ticker import FormatStrFormatter
 from sklearn.decomposition import TruncatedSVD as TSVD
 import nltk.stem
 from sklearn.svm import SVC
-from sklearn.metrics import roc_curve, auc, precision_recall_curve, confusion_matrix
+from sklearn.metrics import roc_curve, auc, precision_recall_curve, confusion_matrix, precision_score, recall_score
 
 english_stemmer = nltk.stem.SnowballStemmer('english')
 class StemmedTfidfVectorizer(TfidfVectorizer):
@@ -76,20 +76,19 @@ print confusionMatrix
 score = svm_classfier.score(svm_test_data, svm_test_tag)
 print score
 
-min_precision = np.linspace(0.1, 0.9, 9)
+precision = precision_score(svm_test_tag, predict)
+recall = recall_score(svm_test_tag, predict)
+print precision, recall
+
+
+
 test_score = svm_classfier.decision_function(svm_test_data)
-precision, recall, thr = precision_recall_curve(svm_test_tag, test_score)
-FPR = []
-TPR = []
-for minp in min_precision:
-    min_thr = min([thr[i] for i in range(len(thr)) if precision[i] > minp])
-    predict = [1 if test_s>min_thr else 0 for test_s in test_score]
-    fpr, tpr, threshold = roc_curve(svm_test_tag, predict)
-    FPR.append(fpr[1])
-    TPR.append(tpr[1])
 #roc_auc = auc(fpr, tpr)
+fpr, tpr, thresholds = roc_curve(svm_test_tag, test_score)
 plt.figure()
-plt.plot(FPR, TPR, lw = 3)
+plt.plot(fpr, tpr, lw=3)
 #plt.legend(loc = 'lower right')
 plt.title("ROC curve")
 plt.show()
+
+

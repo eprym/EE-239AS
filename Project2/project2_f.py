@@ -30,7 +30,7 @@ class StemmedTfidfVectorizer(TfidfVectorizer):
         
 cat=['comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware',
                 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey']
-#train = f20(subset='train',categories=cat, shuffle = True, random_state = 42)
+train = f20(subset='train',categories=cat, shuffle = True, random_state = 42)
 ##train = f20(subset='train',shuffle = True, random_state = 42)
 
 stopwords = text.ENGLISH_STOP_WORDS

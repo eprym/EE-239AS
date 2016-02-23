@@ -2,7 +2,7 @@
 """
 Created on Thu Feb 18 16:50:30 2016
 
-@author: KaimingWang
+@author: YuLiqiang
 """
 
 import numpy as np
@@ -55,9 +55,9 @@ for i in train.target:
 svm_train_tag=np.array(svm_train_tag)
 
 test = f20(subset='test',categories=cat, shuffle = True, random_state = 42)
-vector_test = vectorizer.fit_transform(test.data)
+vector_test = vectorizer.transform(test.data)
 tfidf_test=vector_test.toarray() 
-tfidf_test_reduced = svd.fit_transform(tfidf_test)
+tfidf_test_reduced = svd.transform(tfidf_test)
 svm_test_data = tfidf_test_reduced
 svm_test_tag = []
 for i in test.target:

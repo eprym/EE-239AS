@@ -2,7 +2,7 @@
 """
 Created on Thu Feb 18 16:50:30 2016
 
-@author: KaimingWang
+@author: YuLiqiang
 """
 
 import numpy as np
@@ -36,7 +36,8 @@ class StemmedTfidfVectorizer(TfidfVectorizer):
 cat = ['comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware',
                 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey']
 
-train = f20(subset='train', categories=cat,shuffle =False, random_state = 0)
+train = f20(subset='train', categories=cat,shuffle =False, random_state = 42)
+
 
 stopwords = text.ENGLISH_STOP_WORDS
 vectorizer = StemmedTfidfVectorizer(
@@ -56,9 +57,9 @@ for i in train.target:
 svm_train_tag=np.array(svm_train_tag)
 
 test = f20(subset='test',categories=cat, shuffle = True, random_state = 42)
-vector_test = vectorizer.fit_transform(test.data)
+vector_test = vectorizer.transform(test.data)
 tfidf_test=vector_test.toarray() 
-tfidf_test_reduced = svd.fit_transform(tfidf_test)
+tfidf_test_reduced = svd.transform(tfidf_test)
 svm_test_data = tfidf_test_reduced
 svm_test_tag = []
 for i in test.target:
@@ -72,18 +73,18 @@ svm_test_tag=np.array(svm_test_tag)
 #score = svm_classfier.score(svm_test_data, svm_test_tag)
 #print score
 #
-##Gaussian Naive Bayes
-#gnb = GaussianNB()
-#gnb.fit(svm_train_data, svm_train_tag)
-#gnb_predict=gnb.predict(svm_test_data)
-#precision, recall, thresholds = precision_recall_curve(svm_test_tag,gnb_predict)
-#score = gnb.score(svm_test_data, svm_test_tag)
-#print "GaussianNB"
-#print "confusion matrix:","\n",confusion_matrix(svm_test_tag, gnb_predict)
-#print "score=",score
-#print "precision=",precision[1]
-#print "recall=",recall[1]
-#print "\n"
+#Gaussian Naive Bayes
+gnb = GaussianNB()
+gnb.fit(svm_train_data, svm_train_tag)
+gnb_predict=gnb.predict(svm_test_data)
+precision, recall, thresholds = precision_recall_curve(svm_test_tag,gnb_predict)
+score = gnb.score(svm_test_data, svm_test_tag)
+print "GaussianNB"
+print "confusion matrix:","\n",confusion_matrix(svm_test_tag, gnb_predict)
+print "score=",score
+print "precision=",precision[1]
+print "recall=",recall[1]
+print "\n"
 
 #mnb = MultinomialNB()
 #mnb.fit(tfidf_train, svm_train_tag)

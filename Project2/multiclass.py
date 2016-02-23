@@ -76,10 +76,9 @@ svm_train_tag = train.target
 test = f20(subset='test', categories=cat, shuffle = True, random_state = 42)
 #test_comp = f20(subset='test',categories=cat[0:4], shuffle = True, random_state = 42)
 #test_rect = f20(subset='test',categories=cat[4:], shuffle = True, random_state = 42)
-vector_test = vectorizer.fit_transform(test.data)
-vector_test = vectorizer.fit_transform(test.data)
+vector_test = vectorizer.transform(test.data)
 tfidf_test=vector_test.toarray() 
-tfidf_test_reduced = svd.fit_transform(tfidf_test)
+tfidf_test_reduced = svd.transform(tfidf_test)
 svm_test_data = tfidf_test_reduced
 svm_test_tag = test.target
 #for i in test.target:

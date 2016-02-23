@@ -52,7 +52,7 @@ svm_train_tag = np.array(svm_train_tag)
 
 
         
-svm_classfier = SVC(C=100000)
+svm_classfier = SVC(C=1000)
 svm_classfier.fit(svm_train_data, svm_train_tag)
 
 

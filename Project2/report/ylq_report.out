@@ -1,10 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Dataset and Problem Statement}{}% 2
-\BOOKMARK [1][-]{section.3}{Modeling Text Data and Feature Extraction}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{TFxIDF Vector Representations}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{TFxICF and Significant Terms}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Binary Classification}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Hard Margin SVM}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Soft Margin SVM}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Multiclass Classification}{}% 9
+\BOOKMARK [1][-]{section.2}{Dataset\040and\040Problem\040Statement}{}% 2
+\BOOKMARK [1][-]{section.3}{Modeling\040Text\040Data\040and\040Feature\040Extraction}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{TFxIDF\040Vector\040Representations}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{TFxICF\040and\040Significant\040Terms}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Binary\040Classification}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Hard\040Margin\040SVM}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Soft\040Margin\040SVM}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Multiclass\040Classification}{}% 9
 \BOOKMARK [1][-]{section.6}{Conclusion}{}% 10

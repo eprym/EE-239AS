@@ -2,6 +2,8 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
 \begin{document}
 \begin{titlepage}
 \title{EE 239AS \\Special Topics in Signals and Systems\\Project 2\\Classification Analysis\\Winter 2016} 
@@ -46,7 +48,7 @@ In this part, we would like to figure out whether a term is important to the cla
 \label{10st}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Rank & comp.sys.ibm.pc.hardware & comp.sys.mac.hardware & misc.forsale & soc.religion.christian \\
+Rank & \tabincell{c}{comp.sys.ibm.\\pc.hardware} & \tabincell{c}{comp.sys.\\mac.hardware} & misc.forsale & soc.religion.christian \\
 \hline
 1& penev & powerbook & sabretoo & clh\\
 2& balog & lcii & liefeld & liturgy\\
@@ -74,7 +76,7 @@ And the constraints is
 y_i(W^T\overrightarrow{x_i}+b)\geq 1, i\in\lbrace 1, ..., n \rbrace
 \end{equation*}
 \\
-In the program, we set C to 100000 to simulate the effect of hard margin. The average precision is 96.61\%, the average recall is 98.49\% and the accuracy is 97.49\%.The confusion table is shown in Table \ref{tb:confu}. The ROC curve  is shown in figure \ref{fig:roc}
+In the program, we set C to 100000 to simulate the effect of hard margin (the tutorial said it's zero but I think it's wrong and I have talked about it with the TA). The average precision is 96.61\%, the average recall is 98.49\% and the accuracy is 97.49\%.The confusion table is shown in Table \ref{tb:confu}. The ROC curve  is shown in figure \ref{fig:roc}
 \begin{table}
 \begin{center}
 \caption{The confusion matrix of hard margin SVM}
@@ -94,7 +96,7 @@ Actual Rect&24&1566\\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{roc.png}
-\caption{The ROC curve of hard margin SVM}
+\caption{The ROC curve of binary classification}
 \label{fig:roc}
 \end{figure}
 \subsection{Soft Margin SVM}

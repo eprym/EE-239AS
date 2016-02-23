@@ -79,11 +79,19 @@ gnb.fit(svm_train_data, svm_train_tag)
 gnb_predict=gnb.predict(svm_test_data)
 precision, recall, thresholds = precision_recall_curve(svm_test_tag,gnb_predict)
 score = gnb.score(svm_test_data, svm_test_tag)
+gnb_fpr,bnb_tpr,bnb_thr=roc_curve(svm_test_tag,test_score[:,1])
+gnb_auc = auc(bnb_fpr, bnb_tpr)
+plt.figure()
+plt.plot(bnb_fpr, bnb_tpr, lw = 1)
+#plt.legend(loc = 'lower right')
+plt.title("ROC curve of naive Bayes classifier")
+plt.show()
 print "GaussianNB"
 print "confusion matrix:","\n",confusion_matrix(svm_test_tag, gnb_predict)
 print "score=",score
 print "precision=",precision[1]
 print "recall=",recall[1]
+print "auc=",gnb_auc
 print "\n"
 
 #mnb = MultinomialNB()

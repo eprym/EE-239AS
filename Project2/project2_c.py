@@ -15,13 +15,15 @@ import numpy as np
 from sklearn.datasets import fetch_20newsgroups as f20
 from sklearn.feature_extraction import text
 from sklearn.feature_extraction.text import CountVectorizer
-import nltk.stem
-import scipy       
-class StemmedCountVectorizer(CountVectorizer):
-
-    def build_analyzer(self):
-        analyzer = super(StemmedCountVectorizer, self).build_analyzer()
-        return lambda doc: (english_stemmer.stem(w) for w in analyzer(doc))
+from nltk.stem.lancaster import LancasterStemmer
+from nltk.tokenize.regexp import RegexpTokenizer
+import scipy
+class Tokenizer(object):  
+    def __init__(self):
+        self.tok=RegexpTokenizer(r'\b([a-zA-Z]+)\b')
+        self.stemmer = LancasterStemmer()
+    def __call__(self, doc):
+        return [self.stemmer.stem(token) for token in self.tok.tokenize(doc)]        
 # combine the documents of the same classes into the same docuemnt, divided by ' '        
 train = f20(subset='train',shuffle = True, random_state = 42)
 datalist=[]
@@ -32,8 +34,9 @@ for i in range(0,len(train.data)):
     
 # get the count vector
 stopwords = text.ENGLISH_STOP_WORDS
-vectorizer = StemmedCountVectorizer(
-    min_df=1, stop_words=stopwords, decode_error='ignore')
+vectorizer = CountVectorizer(tokenizer = Tokenizer(),
+                             stop_words=stopwords,
+                             min_df=1)
 vector = vectorizer.fit_transform(datalist)
 count=vector.toarray()
 # get the if and icf

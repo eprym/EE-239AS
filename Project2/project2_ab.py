@@ -4,23 +4,22 @@ Created on Thu Feb 18 17:11:50 2016
 
 @author: fengjun
 """
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer,CountVectorizer
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_20newsgroups as f20
 from sklearn.feature_extraction import text
-from sklearn.feature_extraction.text import TfidfVectorizer
 from matplotlib.ticker import FormatStrFormatter
-import nltk.stem
-
+from nltk.stem.lancaster import LancasterStemmer
+from nltk.tokenize.regexp import RegexpTokenizer
 # remove stem when calculating TF.IDF
-english_stemmer = nltk.stem.SnowballStemmer('english')
-class StemmedTfidfVectorizer(TfidfVectorizer):
+class Tokenizer(object):  
+    def __init__(self):
+        self.tok=RegexpTokenizer(r'\b([a-zA-Z]+)\b')
+        self.stemmer = LancasterStemmer()
+    def __call__(self, doc):
+        return [self.stemmer.stem(token) for token in self.tok.tokenize(doc)]  
 
-    def build_analyzer(self):
-        analyzer = super(StemmedTfidfVectorizer, self).build_analyzer()
-        return lambda doc: (english_stemmer.stem(w) for w in analyzer(doc))
-        
 # choose 8 required classes
 cat=['comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware',
                 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey']
@@ -50,10 +49,13 @@ plt.subplots_adjust(bottom=0.15)
 train = f20(subset='train',shuffle = True, random_state = 42)
 # get the number of features
 stopwords = text.ENGLISH_STOP_WORDS
-vectorizer = StemmedTfidfVectorizer(
-    min_df=1, stop_words=stopwords, decode_error='ignore')
+vectorizer = CountVectorizer(tokenizer = Tokenizer(),
+                             stop_words=stopwords,
+                             min_df=1)
 vector = vectorizer.fit_transform(train.data)
-tfidf=vector.toarray()
+transformer = TfidfTransformer()
+tfidf_fit = transformer.fit_transform(vector.toarray())
+tfidf=tfidf_fit.toarray()
 print 'number of terms: '+str(len(tfidf[0]))
 cat={0:'alt.atheism',1:'alt.atheism',2:'comp.graphics',3:'comp.os.ms-windows.misc',4:'comp.sys.ibm.pc.hardware',5:'comp.windows.x',6:'misc.forsale',7:'rec.autos',8:'rec.motorcycles',9:'rec.sport.baseball',10:'rec.sport.hockey',11:'sci.crypt',12:'sci.electronics',13:'sci.med',14:'sci.space',15:'soc.religion.christian',16:'talk.politics.guns',17:'talk.politics.mideast',18:'talk.politics.misc',19:'talk.religion.misc'
 }

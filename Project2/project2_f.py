@@ -55,9 +55,9 @@ svm_train_tag = np.array(svm_train_tag)
 
   
 test = f20(subset='test',categories=cat, shuffle = True, random_state = 42)
-vector_test = vectorizer.fit_transform(test.data)
+vector_test = vectorizer.transform(test.data)
 tfidf_test=vector_test.toarray() 
-tfidf_test_reduced = svd.fit_transform(tfidf_test)
+tfidf_test_reduced = svd.transform(tfidf_test)
 svm_test_data = tfidf_test_reduced
 
 svm_test_tag = []
@@ -88,18 +88,20 @@ for c in C:
     if(score/5 > bestScore):
         bestScore = score/5
         bestC = c
-print bestC, bestScore
+print "the best c = ", bestC
 svm_classfier = SVC(C = bestC)
 svm_classfier.fit(data_train, tag_train)
 score = svm_classfier.score(data_test, tag_test)
-print score
+print "score = ", score
 
 predict = svm_classfier.predict(data_test)
 confusionMatrix = confusion_matrix(tag_test, predict)
+print "The confusion matrix is\n"
 print confusionMatrix
 
 precision = precision_score(tag_test, predict)
 recall = recall_score(tag_test, predict)
 
-print precision, recall
+print "precision = ",precision
+print "recall = ", recall
     

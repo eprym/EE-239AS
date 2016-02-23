@@ -30,7 +30,7 @@ And the constraints is
 y_i(W^T\overrightarrow{x_i}+b)\geq 1, i\in\lbrace 1, ..., n \rbrace
 \end{equation*}
 \\
-In the program, we set C to 100000 to simulate the effect of hard margin. The average precision is 82.65\%, the average recall is 83.14\% and the accuracy is 82.44\%.The confusion table is shown in Table \ref{tb:confu}. The ROC curve  is shown in figure \ref{fig:roc}
+In the program, we set C to 100000 to simulate the effect of hard margin. The average precision is 96.61\%, the average recall is 98.49\% and the accuracy is 97.49\%.The confusion table is shown in Table \ref{tb:confu}. The ROC curve  is shown in figure \ref{fig:roc}
 \begin{table}
 \begin{center}
 \caption{The confusion matrix of hard margin SVM}
@@ -39,9 +39,9 @@ In the program, we set C to 100000 to simulate the effect of hard margin. The av
 \hline
 & Predicted Comp& Predicted Rect\\
 \hline
-Actual Comp&1275&285\\
+Actual Comp&1505&55\\
 \hline
-Actual Rect&268&1322\\
+Actual Rect&24&1566\\
 \hline 	
 \end{tabular}
 \end{center}
@@ -64,21 +64,60 @@ Accordingly, the constraints are changed to the following:
 y_i(W^T\overrightarrow{x_i}+b)\geq 1-\xi _i,  \xi _i \geq0,  i\in\lbrace 1, ..., n \rbrace
 \end{equation*}
 \\
-The $\gamma$ is the hyperparameter here and different $\gamma$ will affect the classification results. We implemented 5-fold cross validation to fit the model and choose the $\gamma$.  The best $\gamma$ we can get is 1000. The average precision is 96.61\%, the average recall is 97.59\% and the accuracy is 97.08\%. The confusion matrix is shown in Table \ref{tb:confu_soft}
+The $\gamma$ is the hyperparameter here and different $\gamma$ will affect the classification results. We implemented 5-fold cross validation to fit the model and choose the $\gamma$.  The best $\gamma$ we can get is 1000. The average precision is 96.61\%, the average recall is 97.96\% and the accuracy is 97.27\%. The confusion matrix is shown in Table \ref{tb:confu_soft}
 \begin{table}
 \begin{center}
-\caption{The confusion matrix of soft margin SVM with $\gamma$ = 1000}
+\caption{The confusion matrix of soft margin SVM with $\gamma$ = 100000}
 \label{tb:confu_soft}
 \begin{tabular}{|c|c|c|}
 \hline
 & Predicted Comp& Predicted Rect\\
 \hline
-Actual Comp&759&27\\
+Actual Comp&764&27\\
 \hline
-Actual Rect&19&771\\
+Actual Rect&16&769\\
 \hline 	
 \end{tabular}
 \end{center}
 \end{table}
 \section{Multiclass Classification}\label{sec:multi}
+\section{Conclusion}
+In this project, we aimed to finish some classification tasks with the textual data provided by the "20 Newsgroup" dataset. We classified 8 subclasses into 2 classes with the hard margin SVM, soft margin SVM, naive Bayes classifier and logistics regression classifier. The comprehensive results is shown in the Table \ref{tb:binaryresults}. As for the multiclass classification, the comprehensive results is shown in Table \ref{tb:multiresults}.
+\begin{table}
+\begin{center}
+\caption{The comprehensive results of binary classification}
+\label{tb:binaryresults}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Accuracy& Precision& Recall\\
+\hline
+hard margin SVM& 97.49\%&96.61\% &98.49\% \\
+\hline
+soft margin SVM& 97.27\%&96.61\% &97.96\% \\
+\hline 	
+Bayes& & & \\
+\hline
+Logistic Regression& & &\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{The comprehensive results of multiclass classification}
+\label{tb:multiresults}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Accuracy& Precision& Recall\\
+\hline
+SVM& \%&\% &\% \\
+\hline
+Bayes& & & \\
+\hline
+Logistic Regression& & &\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \end{document}

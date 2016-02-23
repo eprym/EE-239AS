@@ -52,14 +52,14 @@ svm_train_tag = np.array(svm_train_tag)
 
 
         
-svm_classfier = SVC(C=1000000)
+svm_classfier = SVC(C=100000)
 svm_classfier.fit(svm_train_data, svm_train_tag)
 
 
 test = f20(subset='test',categories=cat, shuffle = True, random_state = 42)
-vector_test = vectorizer.fit_transform(test.data)
+vector_test = vectorizer.transform(test.data)
 tfidf_test=vector_test.toarray() 
-tfidf_test_reduced = svd.fit_transform(tfidf_test)
+tfidf_test_reduced = svd.transform(tfidf_test)
 svm_test_data = tfidf_test_reduced
 
 svm_test_tag = []
@@ -74,11 +74,12 @@ predict = svm_classfier.predict(svm_test_data)
 confusionMatrix = confusion_matrix(svm_test_tag, predict)
 print confusionMatrix   
 score = svm_classfier.score(svm_test_data, svm_test_tag)
-print score
+print "score = ", score
 
 precision = precision_score(svm_test_tag, predict)
 recall = recall_score(svm_test_tag, predict)
-print precision, recall
+print "precision = ",precision
+print "recall = ", recall
 
 
 

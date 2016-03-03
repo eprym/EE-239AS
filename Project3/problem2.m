@@ -1,3 +1,5 @@
+clear;
+load data;
 obervation=[userId,itemId,rating];
 error=zeros(1,10);
 indices = crossvalind('Kfold',100000,10);
@@ -25,3 +27,7 @@ for j = 1:1:10
     end
     allabs(j)=currentabs;
 end
+allabs=allabs/10000;
+disp(['average absolute error over testing data for each entry of all 10 tests is ' num2str(sum(allabs)/10)])
+disp(['highest average absolute error over testing data for each entry is ' num2str(max(allabs))])
+disp(['lowest average absolute error over testing data for each entry is ' num2str(min(allabs))])

@@ -2,6 +2,8 @@ obervation=[userId,itemId,rating];
 error=zeros(1,10);
 indices = crossvalind('Kfold',100000,10);
 result=zeros(2,10);
+option.iter=1000;
+option.dis=false;
 for j = 1:1:10
     test = (indices == j); 
     train = ~test;
@@ -13,7 +15,7 @@ for j = 1:1:10
          currating=trainset(m,3);
          R(curuser,curitem)=currating;
     end
-    [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100);
+    [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100,option);
     P=A*Y;
     testset=obervation(test,:);
     prerating=NaN*ones(1,10000);
@@ -26,13 +28,14 @@ for j = 1:1:10
     result(1,j)=precision;
     result(2,j)=recall;
 end
-precisions=zeros(1,501);
-recalls=zeros(1,501);
-for i=0:1:500
-    [precision,recall]=precisionAndRecall(testset(:,3),prerating,i*0.01);
+precisions=zeros(1,51);
+recalls=zeros(1,51);
+for i=0:1:50
+    [precision,recall]=precisionAndRecall(testset(:,3),prerating,i*0.1);
     precisions(i+1)=precision;
     recalls(i+1)=recall;
 end;
 plot(recalls,precisions)
 xlabel('Recall'); ylabel('Precision')
-title(['Precision-recall curve (AUC: ' trapz(precisions(1:500), -1./recalls(1:500)) ')'])
+AUC=trapz(recalls,precisions);
+title(['Precision-recall curve (AUC=' num2str(-AUC) ')'])

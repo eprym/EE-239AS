@@ -20,6 +20,6 @@ function[precision,recall]=precisionAndRecall(obseration,prediction,threshold)
             end
         end
     end
-    precision=count2/count1;
-    recall=count4/count3;    
+    recall=count2/count1;
+    precision=count4/count3;    
 end

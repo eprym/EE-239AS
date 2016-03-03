@@ -1,5 +1,5 @@
 function[precision,recall]=precisionAndRecall(obseration,prediction,threshold)
-    x=obseration>threshold;
+    x=obseration>3;
     y=prediction>threshold;
     l=length(obseration);
     count1=0;

@@ -26,3 +26,13 @@ for j = 1:1:10
     result(1,j)=precision;
     result(2,j)=recall;
 end
+precisions=zeros(1,501);
+recalls=zeros(1,501);
+for i=0:1:500
+    [precision,recall]=precisionAndRecall(testset(:,3),prerating,i*0.01);
+    precisions(i+1)=precision;
+    recalls(i+1)=recall;
+end;
+plot(recalls,precisions)
+xlabel('Recall'); ylabel('Precision')
+title(['Precision-recall curve (AUC: ' trapz(precisions(1:500), -1./recalls(1:500)) ')'])

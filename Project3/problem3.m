@@ -1,7 +1,7 @@
 obervation=[userId,itemId,rating];
 error=zeros(1,10);
 indices = crossvalind('Kfold',100000,10);
-allabs=zeros(1,10);
+result=zeros(2,10);
 for j = 1:1:10
     test = (indices == j); 
     train = ~test;
@@ -16,12 +16,13 @@ for j = 1:1:10
     [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100);
     P=A*Y;
     testset=obervation(test,:);
-    currentabs=0;
-    for n=1:1:10000
-        curuser=testset(n,1);
-        curitem=testset(n,2);
-        currating=testset(n,3);
-        currentabs=currentabs+abs(P(curuser,curitem)-currating);
+    prerating=NaN*ones(1,10000);
+    for i=1:1:10000
+        tmpuserId=testset(i,1);
+        tmpitemId=testset(i,2);
+        prerating(i)=P(tmpuserId,tmpitemId);
     end
-    allabs(j)=currentabs;
+    [precision,recall]=precisionAndRecall(testset(:,3),prerating,3);
+    result(1,j)=precision;
+    result(2,j)=recall;
 end

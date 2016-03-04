@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Dataset \& Weighted Non-Negative Matrix Factorization}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Biref about Dataset}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Weighted Non-Negative Matrix Factorization}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}10-fold Cross-validation}{4}{section.3}
+\contentsline {section}{\numberline {4}Precision Over Recall}{4}{section.4}

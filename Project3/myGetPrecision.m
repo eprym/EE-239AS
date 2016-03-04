@@ -1,4 +1,4 @@
-function p = myGetPrecision(predict_index, data, usr, varargin)
+function p = myGetPrecision(predict_index, data, usr)
     count = 0;
     for i = 1:size(predict_index,2)
         if(data(usr, predict_index(i)) > 3)

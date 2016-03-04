@@ -30,23 +30,14 @@ for j = 1:1:10
     result(1,j)=precision;
     result(2,j)=recall;
 end
-<<<<<<< HEAD
 precisions=zeros(1,1001);
 recalls=zeros(1,1001);
 for i=0:1:1000
-=======
-precisions=zeros(1,501);
-recalls=zeros(1,501);
-for i=0:1:500
->>>>>>> origin/master
     [precision,recall]=precisionAndRecall(testset(:,3),prerating,i*0.01);
     precisions(i+1)=precision;
     recalls(i+1)=recall;
 end;
-<<<<<<< HEAD
 figure
-=======
->>>>>>> origin/master
 plot(recalls,precisions)
 xlabel('Recall'); ylabel('Precision')
 AUC=-trapz(recalls,precisions);

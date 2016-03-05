@@ -47,7 +47,7 @@ least square error&54466.7386&19425.539&6202.9535\\
 \end{center}
 \end{table}
 \subsection{10-fold Cross-validation}
-As before, we will use cross-validation in our remmendation system design. We will divide 100,000 records into 10 folds exclusively. Each time, we use 9 folds as trainset and remaining 1 fold as testset. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
+As before, we will use cross-validation in our recommendation system design. We will divide 100,000 records into 10 folds exclusively. Each time, we use 9 folds as trainset and remaining 1 fold as testset. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
 \begin{itemize}
 \item Average absolute error over testing data for each entry of all 10 tests is \emph{233.9302}.
 \item Highest average absolute error over testing data for each entry is \emph{1696.0535}.
@@ -59,11 +59,11 @@ According to testing data, we can assume that if a user has rated a movie 3 or l
 \\
 Out of all predicted entries in which user likes the item, the percentage of the user actually like the item is precision. While out of all entries in which user actually likes the item, the percentage entries which we have predicted successfully is recall.\\
 \\
-In figure \ref{fig:problem3}, we plot the curve of precision verus recall. We can find that there is a tradeoff between precision and recall at most time. And the area under this curve is $0.64685$
+In figure \ref{fig:problem3}, we plot the curve of precision versus recall. We can find that there is a tradeoff between precision and recall at most time. And the area under this curve is $0.64685$
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{problem3.jpg}
-\caption{Precision verus Recall}
+\caption{Precision versus Recall}
 \label{fig:problem3}
 \end{figure}
 
@@ -92,7 +92,7 @@ Let's define the regularization weights $c_{ui} = r_{ui}$, where the subscripts 
 x_u = (Y^TC_uY+\lambda I)^{-1}Y^TC_up_u
 \end{equation*}
 \subsection{Evaluation of the Results}
-We used the same evaluation methods to test the result of the regularized ALS. The total least square error with dirrerent $\lambda$ is shown in table \ref{tb:lamda}. Compared with the results in the previous part, we can see that the errors were reduced. The precison VS recall curve is shown in figure ??? and the area under curve is ???. When setting the threshold to 3, the precision is ??? and the recall is ???.
+We used the same evaluation methods to test the result of the regularized ALS. The total least square error with different $\lambda$ is shown in table \ref{tb:lamda}. Compared with the results in the previous part, we can see that the errors were reduced. The precision VS recall curve is shown in figure ??? and the area under curve is ???. When setting the threshold to 3, the precision is ??? and the recall is ???.
 \begin{table}
 \begin{center}
 \caption{The least square error with different $\lambda$}

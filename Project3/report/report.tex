@@ -32,41 +32,83 @@ This can be implemented by putting 0s where the data is missing and creating a w
 min\sum_{i=1}^{m}\sum_{j=1}^{n}w_{ij}{(r_{ij}-{(UV)}_{ij})}^2
 \end{equation*}
 \\
-Luckily, we do not need to implement this factorization by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is shown in table \ref{tb:k}.
+Luckily, we do not need to implement this factorization by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is shown in table \ref{tb:k}. Furthermore, we found that under different iterations, we may have different performance. We may find the total least square error become smaller when k and iteration rise.
 \begin{table}
 \begin{center}
-\caption{The least square error with different K}
+\caption{The Least Square Error with Different K and Factorization Iteration}
 \label{tb:k}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|l||c|c|c|c|}
 \hline
 k& 10& 50 & 100\\
 \hline
-least square error&54466.7386&19425.539&6202.9535\\
+lteration=50&65422.3843&38416.6458&26216.834\\
+lteration=100&60709.7768&30553.0711&17190.6811\\
+lteration=200&57633.8853&25012.4859&11590.326\\
+lteration=500&55607.3742&21087.0429&7732.6324\\
+lteration=1000&54398.9678&19426.6643&6169.5815\\
+lteration=2000&52557.7469&17968.6925&5228.23\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 \subsection{10-fold Cross-validation}
-As before, we will use cross-validation in our recommendation system design. We will divide 100,000 records into 10 folds exclusively. Each time, we use 9 folds as trainset and remaining 1 fold as testset. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
-\begin{itemize}
-\item Average absolute error over testing data for each entry of all 10 tests is \emph{233.9302}.
-\item Highest average absolute error over testing data for each entry is \emph{1696.0535}.
-\item Lowest average absolute error over testing data for each entry is \emph{1.1073}.
-\end{itemize}
-However, among 10 tests, the average absolate error of most of them are below 2, while the average absolate error of the remaining two or three tests are very high.
+As before, we will use cross-validation in our recommendation system design. We will divide 100,000 records into 10 folds exclusively. Each time, we use 9 folds as trainset and remaining 1 fold as testset. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1. At this time, we choose k to be 100, and set factorization to be 50, 100, 200, 500, 1000 and 2000 to get Average absolute error over testing data for each entry of all 10 tests, Highest average absolute error over testing data for each entry and Lowest average absolute error over testing data for each entry. The result is shown by table\ref{tb:p2}, so we can draw thw conclusion that in this part, we should choose a suitable iteration to get the best absolute error. In order to illustate this phonemon, we try to calculate absolute error within low iterations and the result is shown in table\ref{tb:p22}. It seems that according to k=100, we should not use too high iterations for matrix factorization.
+\begin{table}
+\begin{center}
+\caption{Absolute Error over Testing Data under Different Iteration}
+\label{tb:p2}
+\begin{tabular}{|l||c|c|c|}
+\hline
+ & Average& Highist & Lowest\\
+\hline
+lteration=50&0.8547&0.86669&0.84256\\
+lteration=100&0.90612&0.92049&0.89578\\
+lteration=200&0.97256&0.99214&0.95611\\
+lteration=500&247.925&2469.2667&1.0425\\
+lteration=1000&115.8072&515.373&1.1092\\
+lteration=2000&65.2333&312.8415&1.1706\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{Absolute Error over Testing Data under Low Iteration}
+\label{tb:p22}
+\begin{tabular}{|l||c|c|c|}
+\hline
+ & Average& Highist & Lowest\\
+\hline
+lteration=10&0.80078&0.81206&0.79389\\
+lteration=20&0.80965&0.82013&0.79624\\
+lteration=30&0.82235&0.83746&0.81402\\
+lteration=40&0.84093&0.8543&0.82794\\
+lteration=50&0.85362&0.87073&0.84427\\
+lteration=60&0.86266&0.87285&0.84627\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \subsection{Precision Over Recall}
 According to testing data, we can assume that if a user has rated a movie 3 or lower we conclude they didn't like the movie, and if a user has rated a movie 4 or higher they have liked it. However, when it comes to predicted data, it is our job to set the threshold to decide whether users like or dislike items.\\
 \\
 Out of all predicted entries in which user likes the item, the percentage of the user actually like the item is precision. While out of all entries in which user actually likes the item, the percentage entries which we have predicted successfully is recall.\\
 \\
-In figure \ref{fig:problem3}, we plot the curve of precision versus recall. We can find that there is a tradeoff between precision and recall at most time. And the area under this curve is $0.64685$
+From the previous sections, we knew that both k and iterations hve impact on our prediction performance, so in figure\ref{fig:problem31} and figure\ref{fig:problem32}, we show this relations. It seems that since we only have a small amount of data, we had better use small k and fewer iterations.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.6\textwidth]{problem3.jpg}
-\caption{Precision versus Recall}
-\label{fig:problem3}
+\includegraphics[width=\textwidth]{problem31.png}
+\caption{Precision-recall Curve for k=100 under Different Iterations}
+\label{fig:problem31}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{problem32.png}
+\caption{Precision-recall Curve for iteration=100 under Different k}
+\label{fig:problem32}
+\end{figure}
 \section{Weighted Non-Negative Matrix Factorization with Regularization}
 In the previous section, we talked about how to make recommendation based on the weighted non-negative matrix factorization. In this part, we replaced rating matrix with weight matrix and vice versa. The total square error was reduced to ???. However without any regularization parameter, the prediction matrix would all be 1. Therefore, we add some regularization parameters to the cost function. The new version cost function is as follow:
 \begin{equation*}

@@ -62,7 +62,7 @@ Out of all predicted entries in which user likes the item, the percentage of the
 In figure \ref{fig:problem3}, we plot the curve of precision verus recall. We can find that there is a tradeoff between precision and recall at most time. And the area under this curve is $0.64685$
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.6\textwidth]{problem3.png}
+\includegraphics[width=.6\textwidth]{problem3.jpg}
 \caption{Precision verus Recall}
 \label{fig:problem3}
 \end{figure}
@@ -107,8 +107,14 @@ least square error&???&???&???\\
 \end{center}
 \end{table}
 \section{Creating the Recommendation System}
-The precision of our recommendation system depended on the prediction matrix P and how many movies you want to recommend. When choosing top 5 movies, the precision in the 10-fold cross validation is shown in figure ??? and the average precision is 84.07\%.\\
+The precision of our recommendation system depended on the prediction matrix P and how many movies you want to recommend. When choosing top 5 movies, the precision in the 10-fold cross validation is shown in figure \ref{fig:p5} and the average precision is 84.07\%.\\
 \\
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{precision_5.jpg}
+\caption{The precision over 10-fold cross validation}
+\label{fig:p5}
+\end{figure}
 The hit rate and false alarm rate can change dramatically with different number of recommendations. The results is shown in figure \ref{fig:hit}. From the figure we can see, at the beginning the hit rate increased dramatically with the increasing of the recommendations. After some point, the false alarm rate increased more rapidly than the hit rate, which means the number of recommendation may not be larger than 20.
 \begin{figure}[htbp]
 \centering

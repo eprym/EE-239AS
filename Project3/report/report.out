@@ -1,9 +1,9 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data\040Preprocessing}{}% 2
-\BOOKMARK [1][-]{section.3}{Weighted\040Non-Negative\040Matrix\040Factorization}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{10-fold\040Cross-validation}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Precision\040Over\040Recall}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Weighted\040Non-Negative\040Matrix\040Factorization\040with\040Regularization}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Regularized\040Version\040of\040Alternating\040Least\040Squares}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Evaluation\040of\040the\040Results}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Creating\040the\040Recommendation\040System}{}% 9
+\BOOKMARK [1][-]{section.2}{Data Preprocessing}{}% 2
+\BOOKMARK [1][-]{section.3}{Weighted Non-Negative Matrix Factorization}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{10-fold Cross-validation}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Precision Over Recall}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Weighted Non-Negative Matrix Factorization with Regularization}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Regularized Version of Alternating Least Squares}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Evaluation of the Results}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Creating the Recommendation System}{}% 9

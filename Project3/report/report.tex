@@ -89,7 +89,7 @@ Then we want to factorize P into X and Y such that $P \approx XY^T$. The recomme
 \end{enumerate}
 Let's define the regularization weights $c_{ui} = r_{ui}$, where the subscripts are for user $u$ and movie $i$, and define $C_u$ as the diagonal matrix of $c_u$. Then the update equation for x is
 \begin{equation*}
-x_u = (Y^TC_uY+\lambda I)^{-1}Y^Tp_u
+x_u = (Y^TC_uY+\lambda I)^{-1}Y^TC_up_u
 \end{equation*}
 \subsection{Evaluation of the Results}
 We used the same evaluation methods to test the result of the regularized ALS. The total least square error with dirrerent $\lambda$ is shown in table \ref{tb:lamda}. Compared with the results in the previous part, we can see that the errors were reduced. The precison VS recall curve is shown in figure ??? and the area under curve is ???. When setting the threshold to 3, the precision is ??? and the recall is ???.

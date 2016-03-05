@@ -51,15 +51,7 @@ for j = 1:1:k
         precision = [precision, myGetPrecision(predict_index(1:L),data, p)];
         %precision = [precision, myGetPrecision2(predict_index(1:L),data_index(1:L))];
     end
-%     for p = 1:size(P,1)
-%         P_filter = P(p, ismember(P(p,:), R_test(p,:)));
-%         [predict_result, predict_index] = sort(P_filter, 'descend');
-%         if(size(predict_index,2)>=L)
-%             precision = [precision, myGetPrecision(predict_index(1:L),R_test, p)];
-%         elseif(size(predict_index,2) ~= 0)
-%             precision = [precision, myGetPrecision(predict_index,R_test, p)];
-%         end
-%     end
+
     y(j) = mean(precision);
     fprintf('The average precision for test %d is %f\n', j, y(j));
     totalPrecision = totalPrecision + mean(precision); 

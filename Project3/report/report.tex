@@ -20,7 +20,6 @@
 In this project, we tried to build a movie recommendation system based on the collaborative filtering algorithm. This method based on the fact that there existed some other users who has the similar behaviors so we can use them to make the prediction for a specific target user. First some data preprocessing steps were taken to create the rating matrix. Then we implemented different matrix factorization algorithms to retrieve two factor matrices and get the prediction matrix. The prediction result were measured with 10-fold cross validation and the trade off curve between precision and recall. Finally, we evaluated the effect of our recommendation system by changing the number of movies we want to recommend.\\
 \\
 The report is organized as follows: In section 1, we introduce the dataset we use briefly and weighted non-negative matrix factoration to predict missing data. In section 2, we use cross-validation technique. In section 3, we try to sweep threshold of predicted data in a binary classification problem to find out the relation between precision and recall.
-%\section{Dataset  \& Weighted Non-Negative Matrix Factorization}
 \section{Data Preprocessing}
 In this project, we use MovieLens data sets, which were collected by the GroupLens Research Project at the University of Minnesota. This data set consists of 100,000 ratings from 1 to 5 from 943 users on 1682 movies. So we use the Import Data tool of MATLAB to transfer raw data file into a 100,000*4 matrix and four columns are userId, itemId, rating and timestamp, respectively. Use the first three columns, we can achieve a 943*1682 matrix $R$, $R(i,j)$ represent rating of user $i$ on item $j$.
 
@@ -98,15 +97,9 @@ Out of all predicted entries in which user likes the item, the percentage of the
 From the previous sections, we knew that both k and iterations hve impact on our prediction performance, so in figure\ref{fig:problem31} and figure\ref{fig:problem32}, we show this relations. It seems that since we only have a small amount of data, we had better use small k and fewer iterations.
 \begin{figure}[htbp]
 \centering
-<<<<<<< HEAD
 \includegraphics[width=\textwidth]{problem31.png}
 \caption{Precision-recall Curve for k=100 under Different Iterations}
 \label{fig:problem31}
-=======
-\includegraphics[width=.6\textwidth]{problem3.png}
-\caption{Precision versus Recall}
-\label{fig:problem3}
->>>>>>> origin/master
 \end{figure}
 
 \begin{figure}[htbp]
@@ -170,7 +163,5 @@ The hit rate and false alarm rate can change dramatically with different number 
 \caption{Hit rate VS false alarm rate}
 \label{fig:hit}
 \end{figure}
-
-
 \end{document}
 

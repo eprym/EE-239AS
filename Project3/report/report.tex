@@ -28,13 +28,26 @@ In this project, we use MovieLens data sets, which were collected by the GroupLe
 Since we only have 10,000 ratings in the data sets, there are many missing ratings in matrix $R$, which is fulfilled by NaN values. In order to predict these values, we can employ non-negative matrix factorization to get matrices $U, V$ such that $R_{m \times n}=U_{m \times k}V_{k \times n}$. It is necessary to calculate the least square error and minminzes it.\\
 \\
 This can be implemented by putting 0s where the data is missing and creating a weight matrix to calculate the squared error. Assume that the weight matrix $W_{m \times n}$ contains 1 in entries where we have known data points and 0 in entries where the data is missing. At last, we can formulate the above problem as:
-\begin{equation}
+\begin{equation*}
 min\sum_{i=1}^{m}\sum_{j=1}^{n}w_{ij}{(r_{ij}-{(UV)}_{ij})}^2
-\end{equation}
+\end{equation*}
 \\
-Luckily, we do not need to implement this factoration by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is \emph{54466.7386, 19425.539 and 6202.9535}
+Luckily, we do not need to implement this factoration by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is shown in table \ref{tb:k}.
+\begin{table}
+\begin{center}
+\caption{The least square error with different K}
+\label{tb:k}
+\begin{tabular}{|c|c|c|c|}
+\hline
+k& 10& 50 & 100\\
+\hline
+least square error&54466.7386&19425.539&6202.9535\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \subsection{10-fold Cross-validation}
-As before, we will use cross-validation in our remmendation system design. We will divide 10,000 records into 10 folds exclusively. Each time, we use 9 folds as trainsets and remaining 1 fold as testsets. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.\\
+As before, we will use cross-validation in our remmendation system design. We will divide 10,000 records into 10 folds exclusively. Each time, we use 9 folds as trainsets and remaining 1 fold as testsets. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
 \begin{itemize}
 \item Average absolute error over testing data for each entry of all 10 tests is \emph{233.9302}.
 \item Highest average absolute error over testing data for each entry is \emph{1696.0535}.
@@ -53,4 +66,57 @@ In figure \ref{fig:problem3}, we plot the curve of precision verus recall. We ca
 \caption{Precision verus Recall}
 \label{fig:problem3}
 \end{figure}
+
+\section{Weighted Non-Negative Matrix Factorization with Regularization}
+In the previous section, we talked about how to make recommendation based on the weighted non-negative matrix factorization. In this part, we replaced rating matrix with weight matrix and vice versa. The total square error was reduced to ???. However without any regularization parameter, the prediction matrix would all be 1. Therefore, we add some regularization parameters to the cost function. The new version cost function is as follow:
+\begin{equation*}
+min\sum_{i=1}^{m}\sum_{j=1}^{n}w_{ij}{(r_{ij}-{(UV)}_{ij})}^2 + \lambda\left( \sum_{i=1}^m\sum_{j=1}^ku_{ij}^2+\sum_{i=1}^k\sum_{j=1}^nv_{ij}^2\right) 
+\end{equation*}
+\subsection{Regularized Version of Alternating Least Squares}
+In the alternating least squares algorithm that is implemented in many recommendation system, we need to construct a binary matrix P
+\begin{equation*}
+P = \begin{cases}
+				1, R > 0\\
+				0, R = 0
+		\end{cases}
+\end{equation*}
+Then we want to factorize P into X and Y such that $P \approx XY^T$. The recommendations are largest values in $XY^T$. Since optimizing X and Y simultaneously is non-convex, alternating least squares idea was used, for the reason that if X or Y is fixed, it's just a system of linear equations, which is convex and easy to solve. The solving processes are as follows:
+\begin{enumerate}
+\item Initialize Y with random values
+\item Solve for X
+\item Fix X, solve for Y
+\item Repeat above processes until it converges
+\end{enumerate}
+Let's define the regularization weights $c_{ui} = r_{ui}$, where the subscripts are for user $u$ and movie $i$, and define $C_u$ as the diagonal matrix of $c_u$. Then the update equation for x is
+\begin{equation*}
+x_u = (Y^TC_uY+\lambda I)^{-1}Y^Tp_u
+\end{equation*}
+\subsection{Evaluation of the Results}
+We used the same evaluation methods to test the result of the regularized ALS. The total least square error with dirrerent $\lambda$ is shown in table \ref{tb:lamda}. Compared with the results in the previous part, we can see that the errors were reduced. The precison VS recall curve is shown in figure ??? and the area under curve is ???. When setting the threshold to 3, the precision is ??? and the recall is ???.
+\begin{table}
+\begin{center}
+\caption{The least square error with different $\lambda$}
+\label{tb:lamda}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\lambda$& 0.01& 0.1 & 1\\
+\hline
+least square error&???&???&???\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\section{Creating the Recommendation System}
+The precision of our recommendation system depended on the prediction matrix P and how many movies you want to recommend. When choosing top 5 movies, the precision in the 10-fold cross validation is shown in figure ??? and the average precision is 84.07\%.\\
+\\
+The hit rate and false alarm rate can change dramatically with different number of recommendations. The results is shown in figure \ref{fig:hit}. From the figure we can see, at the beginning the hit rate increased dramatically with the increasing of the recommendations. After some point, the false alarm rate increased more rapidly than the hit rate, which means the number of recommendation may not be larger than 20.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{hit_false_20.jpg}
+\caption{Hit rate VS false alarm rate}
+\label{fig:hit}
+\end{figure}
+
+
 \end{document}
+

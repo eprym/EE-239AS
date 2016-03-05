@@ -7,12 +7,13 @@ obervation=[userId,itemId,rating];
 
 data(isnan(data)) = 0;
 option.dis = false;
-option.iter = 100;
+option.iter = 1000;
 k = 10;
 indices = crossvalind('Kfold',100000,k);
 allabs=zeros(1,k);
 totalPrecision = 0;
-parfor j = 1:1:k
+y = zeros(10,1);
+for j = 1:1:k
     test = (indices == j); 
     train = ~test;
     R=NaN*ones(943,1682);
@@ -26,9 +27,9 @@ parfor j = 1:1:k
     W = ones(size(R));
     W(isnan(R)) = 0;
     R(isnan(R)) = 0;
-    %[A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100,option);
-    [A,Y,numIter,tElapsed,finalResidual]=wnmf_reg(R,100,0.1,option);
-    P=A*Y*5;
+    [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100,option);
+    %[A,Y,numIter,tElapsed,finalResidual]=wnmf_reg(R,100,0.1,option);
+    P=A*Y;
     testset=obervation(test,:);
     currentabs=0;
     R_test = NaN * ones(943, 1682);
@@ -44,27 +45,29 @@ parfor j = 1:1:k
     
     precision = [];
     L = 5;
-%     for p = 1:size(P,1)
-%         [predict_result, predict_index] = sort(P(p,:), 'descend');
-%         [data_result, data_index] = sort(R_test(p,:), 'descend');
-%         precision = [precision, myGetPrecision(data_index(1:L),P, p)];
-%         %precision = [precision, myGetPrecision2(predict_index(1:L),data_index(1:L))];
-%     end
     for p = 1:size(P,1)
-        P_filter = P(p, ismember(P(p,:), R_test(p,:)));
-        [predict_result, predict_index] = sort(P_filter, 'descend');
-        if(size(predict_index,2)>=L)
-            precision = [precision, myGetPrecision(predict_index(1:L),R_test, p)];
-        elseif(size(predict_index,2) ~= 0)
-            precision = [precision, myGetPrecision(predict_index,R_test, p)];
-        end
+        [predict_result, predict_index] = sort(P(p,:), 'descend');
+        [data_result, data_index] = sort(data(p,:), 'descend');
+        precision = [precision, myGetPrecision(predict_index(1:L),data, p)];
+        %precision = [precision, myGetPrecision2(predict_index(1:L),data_index(1:L))];
     end
-    fprintf('The average precision for test %d is %f\n', j, mean(precision));
+%     for p = 1:size(P,1)
+%         P_filter = P(p, ismember(P(p,:), R_test(p,:)));
+%         [predict_result, predict_index] = sort(P_filter, 'descend');
+%         if(size(predict_index,2)>=L)
+%             precision = [precision, myGetPrecision(predict_index(1:L),R_test, p)];
+%         elseif(size(predict_index,2) ~= 0)
+%             precision = [precision, myGetPrecision(predict_index,R_test, p)];
+%         end
+%     end
+    y(j) = mean(precision);
+    fprintf('The average precision for test %d is %f\n', j, y(j));
     totalPrecision = totalPrecision + mean(precision); 
 end
 
-%save('P.mat', 'P')
-
+save('P.mat', 'P')
+x = 1:10;
+plot(x,y);
 fprintf('The total average precision is %f\n', totalPrecision/k);
 
 

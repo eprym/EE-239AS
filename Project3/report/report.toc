@@ -3,3 +3,7 @@
 \contentsline {section}{\numberline {3}Weighted Non-Negative Matrix Factorization}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}10-fold Cross-validation}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Precision Over Recall}{4}{subsection.3.2}
+\contentsline {section}{\numberline {4}Weighted Non-Negative Matrix Factorization with Regularization}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Regularized Version of Alternating Least Squares}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Evaluation of the Results}{6}{subsection.4.2}
+\contentsline {section}{\numberline {5}Creating the Recommendation System}{6}{section.5}

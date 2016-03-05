@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.29)  3 MAR 2016 20:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.22)  4 MAR 2016 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9n> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
@@ -221,7 +221,11 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-No file report.aux.
+(./report.aux
+
+LaTeX Warning: Label `fig:roc' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -240,7 +244,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 \AtBeginShipoutBox=\box28
 Package hyperref Info: Link coloring OFF on input line 7.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -251,6 +255,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
 LaTeX Info: Redefining \nameref on input line 7.
+
+(./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
@@ -286,24 +292,14 @@ e
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
-
-[2]
-
-LaTeX Warning: Reference `sec:binary' on page 3 undefined on input line 22.
-
-
-LaTeX Warning: Reference `sec:multi' on page 3 undefined on input line 22.
-
-
+ [2]
 Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
-
-
-LaTeX Warning: Reference `fig:problema' on page 3 undefined on input line 26.
 
 
 LaTeX Warning: File `problema.png' not found on input line 31.
@@ -355,61 +351,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--43
  []
 
 [4]
-
-LaTeX Warning: Reference `10st' on page 5 undefined on input line 44.
-
-
 Overfull \hbox (2.05624pt too wide) in paragraph at lines 49--65
  [] 
  []
 
-[5]
-
-LaTeX Warning: Reference `tb:confu' on page 6 undefined on input line 79.
-
-
-LaTeX Warning: Reference `fig:roc' on page 6 undefined on input line 79.
-
-<roc_hard.png, id=45, 578.16pt x 433.62pt>
+[5] <roc_hard.png, id=119, 578.16pt x 433.62pt>
 File: roc_hard.png Graphic file (type png)
  <use roc_hard.png>
 Package pdftex.def Info: roc_hard.png used on input line 98.
 (pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
-
-
-LaTeX Warning: Reference `tb:confu_soft' on page 6 undefined on input line 113.
-
-
-
-LaTeX Warning: Reference `fig:roc_soft' on page 6 undefined on input line 113.
-
-[6 <./roc_hard.png>] <roc_soft.png, id=57, 578.16pt x 433.62pt>
+ [6 <./roc_hard.png>] <roc_soft.png, id=133, 578.16pt x 433.62pt>
 File: roc_soft.png Graphic file (type png)
-
-<use roc_soft.png>
+ <use roc_soft.png>
 Package pdftex.def Info: roc_soft.png used on input line 132.
 (pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
 
-
-LaTeX Warning: Reference `tb:confu_gnb' on page 7 undefined on input line 139.
-
-
-LaTeX Warning: Reference `fig:roc_gnb' on page 7 undefined on input line 156.
-
-<g_gaus_naive_bayes_roc.png, id=58, 578.16pt x 430.7292pt>
+<g_gaus_naive_bayes_roc.png, id=136, 578.16pt x 430.7292pt>
 File: g_gaus_naive_bayes_roc.png Graphic file (type png)
 
 <use g_gaus_naive_bayes_roc.png>
 Package pdftex.def Info: g_gaus_naive_bayes_roc.png used on input line 159.
 (pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
 
-
-LaTeX Warning: Reference `tb:confu_bnb' on page 7 undefined on input line 166.
-
-
-LaTeX Warning: Reference `fig:roc_bnb' on page 7 undefined on input line 183.
-
-<g_naive_bayes_roc.png, id=59, 578.16pt x 430.7292pt>
+<g_naive_bayes_roc.png, id=139, 578.16pt x 430.7292pt>
 File: g_naive_bayes_roc.png Graphic file (type png)
 
 <use g_naive_bayes_roc.png>
@@ -418,6 +382,12 @@ Package pdftex.def Info: g_naive_bayes_roc.png used on input line 186.
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--192
 
+ []
+
+
+Overfull \hbox (4.91603pt too wide) in paragraph at lines 137--192
+\OT1/cmr/m/n/10 The ROC of this clas-si-fier is shown as Fig-ure []4[] and the 
+area un-der the curve(AUC)
  []
 
 
@@ -431,13 +401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--192
  []
 
 [7 <./roc_soft.png>] [8 <./g_gaus_naive_bayes_roc.png>]
-
-LaTeX Warning: Reference `tb:confu_lr1' on page 9 undefined on input line 196.
-
-
-LaTeX Warning: Reference `fig:roc_lr1' on page 9 undefined on input line 213.
-
-<h_logistic_regression_l1_roc.png, id=77, 578.16pt x 430.7292pt>
+<h_logistic_regression_l1_roc.png, id=160, 578.16pt x 430.7292pt>
 File: h_logistic_regression_l1_roc.png Graphic file (type png)
 
 <use h_logistic_regression_l1_roc.png>
@@ -445,26 +409,17 @@ Package pdftex.def Info: h_logistic_regression_l1_roc.png used on input line 21
 6.
 (pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
 
-
-LaTeX Warning: Reference `tb:confu_lr2' on page 9 undefined on input line 221.
-
-
-LaTeX Warning: Reference `fig:roc_lr2' on page 9 undefined on input line 238.
-
-<h_logistic_regression_l2_roc.png, id=78, 578.16pt x 430.7292pt>
+<h_logistic_regression_l2_roc.png, id=163, 578.16pt x 430.7292pt>
 File: h_logistic_regression_l2_roc.png Graphic file (type png)
 
 <use h_logistic_regression_l2_roc.png>
 Package pdftex.def Info: h_logistic_regression_l2_roc.png used on input line 24
 1.
 (pdftex.def)             Requested size: 207.0021pt x 154.21455pt.
-
-
-LaTeX Warning: Reference `fig:roc' on page 9 undefined on input line 248.
-
-<roc.png, id=79, 578.16pt x 433.62pt>
+ <roc.png, id=165, 578.16pt x 433.62pt>
 File: roc.png Graphic file (type png)
- <use roc.png>
+
+<use roc.png>
 Package pdftex.def Info: roc.png used on input line 251.
 (pdftex.def)             Requested size: 207.0021pt x 155.24954pt.
 
@@ -479,21 +434,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--255
 
 [9 <./g_naive_bayes_roc.png>] [10 <./h_logistic_regression_l1_roc.png> <./h_log
 istic_regression_l2_roc.png>]
-
-LaTeX Warning: Reference `tb:filenum' on page 11 undefined on input line 259.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 257--276
 
  []
-
-
-LaTeX Warning: Reference `tb:confu_mul_gnb' on page 11 undefined on input line 
-282.
-
-
-LaTeX Warning: Reference `tb:confu_mul_bnb' on page 11 undefined on input line 
-305.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 278--327
@@ -517,11 +460,6 @@ s case, the Bernoulli's
  []
 
 [11 <./roc.png>] [12]
-
-LaTeX Warning: Reference `tb:confu_mul_svm_ovo' on page 13 undefined on input l
-ine 333.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 329--353
 
  []
@@ -530,10 +468,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--353
 Underfull \hbox (badness 10000) in paragraph at lines 329--353
 
  []
-
-
-LaTeX Warning: Reference `tb:confu_mul_svm_ovr' on page 13 undefined on input l
-ine 359.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 355--381
@@ -546,42 +480,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--381
  []
 
 [13]
-
-LaTeX Warning: Reference `tb:binaryresults' on page 14 undefined on input line 
-383.
-
-
-LaTeX Warning: Reference `tb:multiresults' on page 14 undefined on input line 3
-83.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
-[14]
+ [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: E8B9A229B0CC6FADB9DCC0598E8D92D1;985.
 
 
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  E8B9A229B0CC6FADB9DCC0598E8D92D1;985.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
  ) 
 Here is how much of TeX's memory you used:
- 5742 strings out of 493054
- 83472 string characters out of 6134760
- 174415 words of memory out of 5000000
- 9181 multiletter control sequences out of 15000+600000
+ 5766 strings out of 493089
+ 83772 string characters out of 6134842
+ 175919 words of memory out of 5000000
+ 9159 multiletter control sequences out of 15000+600000
  9537 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,14n,28p,850b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -597,10 +514,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (14 pages, 266557 bytes).
+Output written on report.pdf (14 pages, 275666 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 267 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

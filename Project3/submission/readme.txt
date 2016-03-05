@@ -1,10 +1,10 @@
 SUMMARY
 ==============================================
-This package is the code for project 3 of EE239AS Special Topics in Signals and Systems. The author is Liqiang YU, Kaiming WANG and Jun FENG.
+This package is the code for project 3 of EE239AS Special Topics in Signals and Systems. The author are Liqiang YU, Kaiming WANG and Jun FENG.
 
 BEFORE USEAGE
 ==============================================
-Before use the code, please ensure to include wnmfrule function in the Matrix Factorization Toolbox. 
+Before using the code, please ensure to include wnmfrule function in the Matrix Factorization Toolbox. 
 
 DETAILED DESCRIPTIONS OF FILES
 ==============================================

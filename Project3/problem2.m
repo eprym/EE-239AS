@@ -15,7 +15,8 @@ for j = 1:1:10
          currating=trainset(m,3);
          R(curuser,curitem)=currating;
     end
-    [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100);
+    option.iter=1000;
+    [A,Y,numIter,tElapsed,finalResidual]=wnmfrule(R,100,option);
     P=A*Y;
     testset=obervation(test,:);
     currentabs=0;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.22)  4 MAR 2016 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.22)  4 MAR 2016 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,22 +348,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: C53B99B359984BBFA0088BADC96D5D64;726
-(rerunfilecheck)             After:  35D2B03BC5C1EA5D4BF9FDB03E37F5E1;657.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 35D2B03BC5C1EA5D4BF9FDB03E37F5E1;657.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 5705 strings out of 493089
- 82777 string characters out of 6134842
+ 5704 strings out of 493089
+ 82767 string characters out of 6134842
  170557 words of memory out of 5000000
- 9128 multiletter control sequences out of 15000+600000
+ 9127 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,9n,28p,731b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -379,7 +372,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (7 pages, 208274 bytes).
+Output written on report.pdf (7 pages, 208296 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams

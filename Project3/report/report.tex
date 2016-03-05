@@ -22,17 +22,17 @@ In this project, we tried to build a movie recommendation system based on the co
 The report is organized as follows: In section 1, we introduce the dataset we use briefly and weighted non-negative matrix factoration to predict missing data. In section 2, we use cross-validation technique. In section 3, we try to sweep threshold of predicted data in a binary classification problem to find out the relation between precision and recall.
 %\section{Dataset  \& Weighted Non-Negative Matrix Factorization}
 \section{Data Preprocessing}
-In this project, we use MovieLens data sets, which were collected by the GroupLens Research Project at the University of Minnesota. This data set consists of 100,000 ratings from 1 to 5 from 943 users on 1682 movies. So we use the Import Data tool of matlab to transfer raw data file into a 1000*4 matrix and four columns are userId, itemId, rating and timestamp, respectively. Use the first three columns, we can achieve a 943*1682 matrix $R$, $R(i,j)$ represent rating of user $i$ on item $j$.
+In this project, we use MovieLens data sets, which were collected by the GroupLens Research Project at the University of Minnesota. This data set consists of 100,000 ratings from 1 to 5 from 943 users on 1682 movies. So we use the Import Data tool of MATLAB to transfer raw data file into a 100,000*4 matrix and four columns are userId, itemId, rating and timestamp, respectively. Use the first three columns, we can achieve a 943*1682 matrix $R$, $R(i,j)$ represent rating of user $i$ on item $j$.
 
 \section{Weighted Non-Negative Matrix Factorization}
-Since we only have 10,000 ratings in the data sets, there are many missing ratings in matrix $R$, which is fulfilled by NaN values. In order to predict these values, we can employ non-negative matrix factorization to get matrices $U, V$ such that $R_{m \times n}=U_{m \times k}V_{k \times n}$. It is necessary to calculate the least square error and minminzes it.\\
+Since we only have 100,000 ratings in the data sets, there are many missing ratings in matrix $R$, which is fulfilled by NaN values. In order to predict these values, we can employ non-negative matrix factorization to get matrices $U, V$ such that $R_{m \times n}=U_{m \times k}V_{k \times n}$. It is necessary to calculate the least square error and minimize it.\\
 \\
 This can be implemented by putting 0s where the data is missing and creating a weight matrix to calculate the squared error. Assume that the weight matrix $W_{m \times n}$ contains 1 in entries where we have known data points and 0 in entries where the data is missing. At last, we can formulate the above problem as:
 \begin{equation*}
 min\sum_{i=1}^{m}\sum_{j=1}^{n}w_{ij}{(r_{ij}-{(UV)}_{ij})}^2
 \end{equation*}
 \\
-Luckily, we do not need to implement this factoration by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is shown in table \ref{tb:k}.
+Luckily, we do not need to implement this factorization by hand. Instead, we can use \emph{wnmfrule} function in the Matrix Factorization Toolbox in MATLAB. By choosing the $k$ equal to $10, 50, 100$, the total least squared error is shown in table \ref{tb:k}.
 \begin{table}
 \begin{center}
 \caption{The least square error with different K}
@@ -47,7 +47,7 @@ least square error&54466.7386&19425.539&6202.9535\\
 \end{center}
 \end{table}
 \subsection{10-fold Cross-validation}
-As before, we will use cross-validation in our remmendation system design. We will divide 10,000 records into 10 folds exclusively. Each time, we use 9 folds as trainsets and remaining 1 fold as testsets. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
+As before, we will use cross-validation in our remmendation system design. We will divide 100,000 records into 10 folds exclusively. Each time, we use 9 folds as trainset and remaining 1 fold as testset. However, we will calculate average absolute error over testing data among all entries this time, not previous total least squared error as in section 1.
 \begin{itemize}
 \item Average absolute error over testing data for each entry of all 10 tests is \emph{233.9302}.
 \item Highest average absolute error over testing data for each entry is \emph{1696.0535}.

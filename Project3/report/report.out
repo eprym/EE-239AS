@@ -4,6 +4,7 @@
 \BOOKMARK [2][-]{subsection.3.1}{10-fold Cross-validation}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Precision Over Recall}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Weighted Non-Negative Matrix Factorization with Regularization}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Regularized Version of Alternating Least Squares}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Evaluation of the Results}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Creating the Recommendation System}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{The Reason of Regularization}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Regularized Version of Alternating Least Squares}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Evaluation of the Results}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Creating the Recommendation System}{}% 10

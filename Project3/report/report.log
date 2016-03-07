@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.22)  4 MAR 2016 22:44
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.29)  4 MAR 2016 22:36
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.22)  4 MAR 2016 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -225,7 +221,11 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(./report.aux)
+(./report.aux
+
+LaTeX Warning: Label `tb:k' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -244,8 +244,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 \AtBeginShipoutBox=\box28
 Package hyperref Info: Link coloring OFF on input line 7.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -298,130 +297,106 @@ e
 \openout4 = `report.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[3] <problem31.png, id=80, 1124.2pt x 843.15pt>
+[3] <problem31.png, id=82, 1124.2pt x 843.15pt>
 File: problem31.png Graphic file (type png)
  <use problem31.png>
-<<<<<<< HEAD
-Package pdftex.def Info: problem31.png used on input line 102.
-(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+Package pdftex.def Info: problem31.png used on input line 101.
+(pdftex.def)             Requested size: 207.0021pt x 155.24698pt.
 
-<problem3.png, id=81, 562.1pt x 421.575pt>
+<problem3.png, id=83, 562.1pt x 421.575pt>
 File: problem3.png Graphic file (type png)
  <use problem3.png>
-Package pdftex.def Info: problem3.png used on input line 106.
+Package pdftex.def Info: problem3.png used on input line 104.
 (pdftex.def)             Requested size: 207.0021pt x 155.24696pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--111
-=======
-Package pdftex.def Info: problem31.png used on input line 100.
-(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--104
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
+Underfull \hbox (badness 10000) in paragraph at lines 94--108
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 94--111
+Underfull \hbox (badness 10000) in paragraph at lines 94--108
 
  []
 
-[4] <problem32.png, id=90, 1124.2pt x 843.15pt>
+[4] <problem32.png, id=96, 1124.2pt x 843.15pt>
 File: problem32.png Graphic file (type png)
  <use problem32.png>
-Package pdftex.def Info: problem32.png used on input line 114.
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 93--104
-
- []
-
-[4] <problem32.png, id=89, 1124.2pt x 843.15pt>
-File: problem32.png Graphic file (type png)
- <use problem32.png>
-Package pdftex.def Info: problem32.png used on input line 107.
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
-(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+Package pdftex.def Info: problem32.png used on input line 111.
+(pdftex.def)             Requested size: 207.0021pt x 155.24698pt.
  [5]
-[6 <./problem31.png (PNG copy)> <./problem3.png (PNG copy)>] [7 <./problem32.pn
-g (PNG copy)>] <precision_5.jpg, id=109, 562.1pt x 421.575pt>
+[6 <./problem31.png (PNG copy)> <./problem3.png (PNG copy)> <./problem32.png (P
+NG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 125--142
+
+ []
+
+[7] <roc_k10.png, id=117, 526.96875pt x 395.22656pt>
+File: roc_k10.png Graphic file (type png)
+ <use roc_k10.png>
+Package pdftex.def Info: roc_k10.png used on input line 165.
+(pdftex.def)             Requested size: 207.0021pt x 155.2534pt.
+
+<roc_k50.png, id=118, 526.96875pt x 395.22656pt>
+File: roc_k50.png Graphic file (type png)
+ <use roc_k50.png>
+Package pdftex.def Info: roc_k50.png used on input line 171.
+(pdftex.def)             Requested size: 207.0021pt x 155.2534pt.
+
+<roc_k100.png, id=119, 526.96875pt x 395.22656pt>
+File: roc_k100.png Graphic file (type png)
+ <use roc_k100.png>
+Package pdftex.def Info: roc_k100.png used on input line 177.
+(pdftex.def)             Requested size: 207.0021pt x 155.2534pt.
+
+<precision_5.jpg, id=121, 562.1pt x 421.575pt>
 File: precision_5.jpg Graphic file (type jpg)
-<<<<<<< HEAD
-
-<use precision_5.jpg>
-Package pdftex.def Info: precision_5.jpg used on input line 162.
-(pdftex.def)             Requested size: 207.0021pt x 155.24696pt.
- <hit_false_20.jpg, id=111, 562.1pt x 421.575pt>
-File: hit_false_20.jpg Graphic file (type jpg)
-
-<use hit_false_20.jpg>
-Package pdftex.def Info: hit_false_20.jpg used on input line 169.
-=======
  <use precision_5.jpg>
-Package pdftex.def Info: precision_5.jpg used on input line 155.
+Package pdftex.def Info: precision_5.jpg used on input line 189.
 (pdftex.def)             Requested size: 207.0021pt x 155.24696pt.
 
-<hit_false_20.jpg, id=109, 562.1pt x 421.575pt>
+<hit_false_20.jpg, id=123, 562.1pt x 421.575pt>
 File: hit_false_20.jpg Graphic file (type jpg)
  <use hit_false_20.jpg>
-Package pdftex.def Info: hit_false_20.jpg used on input line 162.
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
+Package pdftex.def Info: hit_false_20.jpg used on input line 196.
 (pdftex.def)             Requested size: 207.0021pt x 155.24696pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 158--173
+Underfull \hbox (badness 10000) in paragraph at lines 185--200
 
  []
 
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [9 <./precision_5.jpg> <./hit_false_20.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+[8] [9 <./roc_k10.png (PNG copy)> <./roc_k50.png (PNG copy)>] [10 <./roc_k100.p
+ng (PNG copy)> <./precision_5.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+ [11 <./hit_false_20.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 35D2B03BC5C1EA5D4BF9FDB03E37F5E1;657.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+(rerunfilecheck)             Checksum: 4194C04499E246E34F85CA723E70C07E;735.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 5714 strings out of 493089
- 82830 string characters out of 6134842
- 176964 words of memory out of 5000000
- 9130 multiletter control sequences out of 15000+600000
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 151--166
-
- []
-
-[8] [9 <./precision_5.jpg> <./hit_false_20.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 35D2B03BC5C1EA5D4BF9FDB03E37F5E1;657.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
- ) 
-Here is how much of TeX's memory you used:
- 5707 strings out of 493054
- 82729 string characters out of 6134760
- 177077 words of memory out of 5000000
- 9163 multiletter control sequences out of 15000+600000
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
+ 5739 strings out of 493089
+ 83167 string characters out of 6134842
+ 177078 words of memory out of 5000000
+ 9145 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,9n,28p,1098b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,28p,1101b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -434,14 +409,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<<<<<<< HEAD
-Output written on report.pdf (9 pages, 310182 bytes).
-=======
-Output written on report.pdf (9 pages, 295159 bytes).
->>>>>>> 74c7f8af50d2a2dd6b2e3bc247518e9513e23dc2
+Output written on report.pdf (11 pages, 398379 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

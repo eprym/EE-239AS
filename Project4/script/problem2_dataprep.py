@@ -18,7 +18,7 @@ mintime = int(time.mktime(start_date.timetuple()))
 maxtime = int(time.mktime(end_date.timetuple()))
 day_start_time = int(time.mktime(day_start.timetuple()))
 
-for i in range(5,6):
+for i in range(len(hashtag)):
     filename = '../tweet_data/tweets_#%s.txt' % hashtag[i]
     f = open(filename)
     line = f.readline()

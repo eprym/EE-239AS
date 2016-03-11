@@ -1,0 +1,3 @@
+problem3
+
+usr mention count, url ratio, original author max followers, time series, favorite

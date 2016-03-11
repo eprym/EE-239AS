@@ -12,7 +12,7 @@ import math
 
 hashtag = ['gohawks', 'gopatriots', 'nfl', 'patriots', 'sb49', 'superbowl']
 for i in range(len(hashtag)):
-    filename = 'problem2_data_#%s' %hashtag[i]
+    filename = 'problem3_data_#%s' %hashtag[i]
     data_tmp = np.loadtxt(filename)
     if(i == 0):
         data = data_tmp

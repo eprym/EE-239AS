@@ -1,9 +1,9 @@
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
-The average number of tweets per hour for #gohawks is 193.555556
+The average number of tweets per hour for #gohawks is 380.842105
 
 The average number of followers of users for #gohawks is 5835.000000
 
-The average number of retweet for #gohawks is 0.000000
+The average number of retweet for #gohawks is 0.209163
 
 >>> 
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =

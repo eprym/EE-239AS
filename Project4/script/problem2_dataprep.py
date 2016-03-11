@@ -18,7 +18,7 @@ mintime = int(time.mktime(start_date.timetuple()))
 maxtime = int(time.mktime(end_date.timetuple()))
 day_start_time = int(time.mktime(day_start.timetuple()))
 
-for i in range(1):
+for i in range(5,6):
     filename = '../tweet_data/tweets_#%s.txt' % hashtag[i]
     f = open(filename)
     line = f.readline()
@@ -35,6 +35,5 @@ for i in range(1):
         data_update[4+(tweet['firstpost_date']-day_start_time)/3600%24] = 1
         line = f.readline()
 
-
-np.savetxt('problem2_data', data)
-print 'save the data succesfully\n'
+    np.savetxt('problem2_data_#%s' %hashtag[i], data)
+    print 'save the data succesfully for #%s\n' %hashtag[i]

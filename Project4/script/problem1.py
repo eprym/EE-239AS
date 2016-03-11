@@ -60,16 +60,20 @@ for i in range(len(hashtag_plot)):
     for j in range(0, len(tweets)):
         tweet = tweets[j]
         tweet_time = tweet['firstpost_date']
-        mintime = min(mintime, tweet_time)
+        new_mintime = min(mintime, tweet_time)
+        if(mintime-new_mintime < 3600*24*15):
+            mintime = new_mintime
         maxtime = max(maxtime, tweet_time)
      
     freq = []
     for k in range(0, len(tweets)):
         tweet = tweets[k]
+        if(tweet['firstpost_date'] < mintime):
+            continue
         freq.append(math.ceil((tweet['firstpost_date']-mintime)/3600))
     
     plt.figure()    
-    plt.hist(freq, 972)
+    plt.hist(freq, 494)
     plt.xlabel('hours')
     plt.ylabel('frequency')
     plt.title('The number of tweets VS hour for #%s' %hashtag_plot[i])

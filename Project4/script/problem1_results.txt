@@ -1,0 +1,46 @@
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #gohawks is 193.555556
+
+The average number of followers of users for #gohawks is 5835.000000
+
+The average number of retweet for #gohawks is 0.000000
+
+>>> 
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #gopatriots is 38.407028
+
+The average number of followers of users for #gopatriots is 2334.000000
+
+The average number of retweet for #gopatriots is 0.000000
+
+>>> 
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #nfl is 279.723542
+
+The average number of followers of users for #nfl is 16414.000000
+
+The average number of retweet for #nfl is 0.000000
+
+>>> 
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #patriots is 499.707143
+
+The average number of followers of users for #patriots is 5467.000000
+
+The average number of retweet for #patriots is 0.000000
+
+>>> 
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #sb49 is 1420.878007
+
+The average number of followers of users for #sb49 is 14336.000000
+
+The average number of retweet for #sb49 is 0.000000
+
+>>> 
+= RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
+The average number of tweets per hour for #superbowl is 1402.044699
+
+The average number of followers of users for #superbowl is 19474.000000
+
+The average number of retweet for #superbowl is 0.000000

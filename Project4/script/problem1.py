@@ -43,8 +43,8 @@ for i in range(1):
             mintime = new_mintime
         maxtime = max(maxtime, tweet_time)
         usrid.add(tweet['tweet']['user']['id'])
-        num_followers += tweet['tweet']['user']['followers_count']
-        num_retweet += tweet['tweet']['retweet_count']
+        num_followers += tweet['author']['followers']
+        num_retweet += tweet['metrics']['citations']['total']
     hourlength = math.ceil((maxtime-mintime)/3600)
     print 'The average number of tweets per hour for #%s is %f\n' %(hashtag[i], len(tweets)/hourlength)
     print 'The average number of followers of users for #%s is %f\n' %(hashtag[i], num_followers/len(usrid))

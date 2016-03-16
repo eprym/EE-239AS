@@ -26,19 +26,18 @@ from pybrain.tools.shortcuts import buildNetwork
 from pybrain.supervised.trainers import BackpropTrainer
 from pybrain.structure.modules.neuronlayer import *
 
+from scipy import stats
 
 
 
 # Compare the linear regression model and random forest regression model
 def linear_Regression(data, target, network):
     lr = linear_model.LinearRegression(normalize = True)
-    
-#    lr.fit(data, target)
+#    lr=
+    lr.fit(data, target)
 #    F, pval = f_regression(data, lr.predict(data))
-#    lr_predict=lr.predict(data)
+    lr_predict=lr.predict(data)
 #    rmse_linear = sqrt(np.mean((lr_predict - target) ** 2))
-#    RMSE_LINEAR.append(rmse_linear)    
-#    rfr = RandomForestRegressor(n_estimators = 30,max_depth = 12, max_features='auto')
     kf = KFold(len(target), n_folds=10, shuffle=True, random_state=None)
     RMSE_LINEAR = []
     for train_index, test_index in kf:
@@ -49,9 +48,6 @@ def linear_Regression(data, target, network):
 #        rfr = rfr.fit(data_train, target_train)
         rmse_linear = sqrt(np.mean((lr.predict(data_test) - target_test) ** 2))
         RMSE_LINEAR.append(rmse_linear)
-#        rmse_rfr = sqrt(np.mean((rfr.predict(data_test) - target_test) ** 2))
-#        RMSE_RFR.append(rmse_rfr)
-    lr_predict=lr.predict(data)
     #scores = cross_validation.cross_val_score(rfr,data_test, target_test.ravel, cv=10)
     #print np.mean(scores)
     
@@ -205,12 +201,12 @@ def polynomial(data,target,network,deg):
         rmse_linear = sqrt(np.mean((lr.predict(data_test) - target_test) ** 2))
         RMSE_POLY.append(rmse_linear)
         
-    RMSE_poly=np.mean(RMSE_POLY)
+#    RMSE_poly=np.mean(RMSE_POLY)
     return RMSE_POLY,poly_predict
     
 def main():
     hashtag = ['gohawks', 'gopatriots', 'nfl', 'patriots', 'sb49', 'superbowl']
-    tag_start=5
+    tag_start=1
     tag_num=1
     for i in range(tag_start,tag_start+tag_num):
         filename = 'problem3_data_#%s' %hashtag[i]
@@ -220,7 +216,7 @@ def main():
         else:
             network = np.concatenate((network,data_tmp))
     
-    data = network[0:len(network)-1,1:]
+    data = network[0:len(network)-1,0:]
     
     target =network[1:,0]
     data=np.nan_to_num(data)
@@ -237,19 +233,20 @@ def main():
 #    print(np.isnan(np.sum(target)))
     
     ### linear regression using statsmodel
-#    model = sm.OLS(target, data)
-#    results = model.fit()
-#    print(results.summary())
+    model = sm.OLS(target, data)
+    results = model.fit()
+    print(results.summary())
     ### if you want to make the data into binary format, uncomment the line below
     #data = preprocessed_1(network)
     
     ### compare the linear model with the random forest model
     RMSE_linear,lr_predict=linear_Regression(data, target, network)
     print(np.mean(RMSE_linear))
+    print(stats.ttest_rel(lr_predict,target))
     
     ### polynomial model
-    RMSE_poly,ploy_predict=polynomial(data,target,network,2)
-    print(np.mean(RMSE_poly))    
+#    RMSE_poly,ploy_predict=polynomial(data,target,network,2)
+#    print(np.mean(RMSE_poly))    
     
     ### Tuning the parameters of the random forest, SLOW !!!
 #    RMSE_rfr=randomforest_tuning(data, target, network)

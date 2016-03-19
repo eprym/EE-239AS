@@ -26,7 +26,7 @@ def loadTweet(txtname):
         
 
 hashtag = ['gohawks', 'gopatriots', 'nfl', 'patriots', 'sb49', 'superbowl']
-for i in range(1):
+for i in range(5,6):
     tweets = loadTweet(hashtag[i])
     start_date = datetime.datetime(2015,02,01, 12,0,0)
     end_date = datetime.datetime(2015,02,01, 12,0,0)

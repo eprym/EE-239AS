@@ -1,7 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
 \contentsline {section}{\numberline {2}Data Analysis}{3}{section.2}
-\contentsline {section}{\numberline {3}Description of the emotion change : Sentiment Analysis}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Problem Statement}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{5}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Pointwise Mutual Information}{5}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Results and Discussions}{6}{subsection.3.4}
+\contentsline {section}{\numberline {3}Linear regression model}{3}{section.3}
+\contentsline {section}{\numberline {4}Cross Validation and Time Period}{5}{section.4}
+\contentsline {section}{\numberline {5}Make prediction}{6}{section.5}
+\contentsline {section}{\numberline {6}Description of the emotion change : Sentiment Analysis}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}Problem Statement}{7}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Data Preprocessing}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Pointwise Mutual Information}{8}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Results and Discussions}{8}{subsection.6.4}

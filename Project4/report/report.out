@@ -1,7 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data\040Analysis}{}% 2
-\BOOKMARK [1][-]{section.3}{Description\040of\040the\040emotion\040change\040:\040Sentiment\040Analysis}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Problem\040Statement}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Data\040Preprocessing}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Pointwise\040Mutual\040Information}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.4}{Results\040and\040Discussions}{section.3}% 7
+\BOOKMARK [1][-]{section.2}{Data Analysis}{}% 2
+\BOOKMARK [1][-]{section.3}{Linear regression model}{}% 3
+\BOOKMARK [1][-]{section.4}{Cross Validation and Time Period}{}% 4
+\BOOKMARK [1][-]{section.5}{Make prediction}{}% 5
+\BOOKMARK [1][-]{section.6}{Description of the emotion change : Sentiment Analysis}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{Problem Statement}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{Data Preprocessing}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.3}{Pointwise Mutual Information}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.4}{Results and Discussions}{section.6}% 10

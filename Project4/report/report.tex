@@ -61,8 +61,8 @@ In this section, we use linear regression model with five required features incl
 \\
 P-value can tell us the accuracy while t-test can be used to note the significance of each feature. The result is in table \ref{tb:p21} and table \ref{tb:p22}.
 \begin{table}
-\begin{center}
 \caption{T-test of Different Hashtag}
+\begin{adjustbox}{center}
 \label{tb:p21}
 \begin{tabular}{|l||c|c|c|c|c|}
 \hline
@@ -76,12 +76,12 @@ sb49&11.600&-4.032&3.221&2.243&-0.366\\
 superbowl&8.992&-2.426&-1.116&1.912&-0.327\\
 \hline
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 
 \begin{table}
-\begin{center}
 \caption{P-value of Different Hashtag}
+\begin{adjustbox}{center}
 \label{tb:p22}
 \begin{tabular}{|l||c|c|c|c|c|}
 \hline
@@ -95,15 +95,15 @@ sb49&0.000&0.000&0.001&0.025&0.714\\
 superbowl&0.000&0.016&0.265&0.056&0.744\\
 \hline
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 
 \section{Cross Validation and Time Period}
 In this section, Firstly, we apply cross-validation to section 3. We divide set of \emph{(features,predictant)} into 10 parts. Each time, we fit our model with 9 parts and predict the number of tweets of remaining parts. We use average prediction error $|N_{predicted}-N_{real}|$ over all the samples in the remaining part to reflect the perfomance, the result is in table \ref{tb:p41}. We use both linear regression and polynomial regression, we may find that linear regression performs a bit better than polynomial regression.
 
 \begin{table}
-\begin{center}
 \caption{Average Prediction Error over Different Hashtags}
+\begin{adjustbox}{center}
 \label{tb:p41}
 \begin{tabular}{|l||c|c|}
 \hline
@@ -117,7 +117,7 @@ sb49&1250.245770&2259.266121\\
 superbowl&2835.748989&3554.870260\\
 \hline
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 
 From section 1, we can find that patterm is totally different among different period. So, we should divide the datasets into different period. In this project, we divide them into three periods according to first post time of tweets:
@@ -132,8 +132,8 @@ Then, we conduct 10-fold cross-validation in different period, in period 1 and p
 
 
 \begin{table}
-\begin{center}
 \caption{Average Prediction Error over Different Hashtags and Periods}
+\begin{adjustbox}{center}
 \label{tb:p42}
 \begin{tabular}{|l||c|c|c|c|c|c|c|}
 \hline
@@ -147,15 +147,15 @@ sb49&552.755564&666.017315&35125.435713&74726.211367&247.370058&323.475495\\
 superbowl&821.552995&930.019195&79503.117523&253415.804881&380.846079&463.248204\\
 \hline
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 
 \section{Make prediction}
 From the previous section, since we have 6 hashtags and 3 peroids, totally we have 18 models to make prediction. In this section, 10 test data has been given, after skimming over the data, we can get their peroids and hashtags. Then we can use the suitable models in last model to get the best prediction. The result of prediction is in table \ref{tb:p51}. We still contract two regression model. Since linear regression cannot produce resonable prediction in Period 2, we recognize polynomial regression as final result in Period 2 while we will use linear regression result in Peroid 1 and Peroid 3.
 
 \begin{table}
-\begin{center}
 \caption{Prediction of Number of Tweets for the Next Hour}
+\begin{adjustbox}{center}
 \label{tb:p51}
 \begin{tabular}{|l||c|c|c|c|c|}
 \hline
@@ -173,7 +173,7 @@ $sample9_period2.txt$&nfl&Period 2&19622&5428\\
 $sample10_period3.txt$&nfl&Period 3&101&1581925\\
 \hline
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \end{table}
 
 \section{Description of the emotion change : Sentiment Analysis}

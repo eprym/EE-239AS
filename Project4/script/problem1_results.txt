@@ -1,15 +1,15 @@
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
 The average number of tweets per hour for #gohawks is 380.842105
 
-The average number of followers of users for #gohawks is 5373.197530
+The average number of followers of users for #gohawks is 1544.969780
 
-The average number of retweet for #gohawks is 2.014617
+The average number of retweet for #gohawks is 2.0146174617
 
 >>> 
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
 The average number of tweets per hour for #gopatriots is 53.425662
 
-The average number of followers of users for #gopatriots is 2042.461705
+The average number of followers of users for #gopatriots is 1298.824271
 
 The average number of retweet for #gopatriots is 1.400084
 
@@ -17,7 +17,7 @@ The average number of retweet for #gopatriots is 1.400084
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
 The average number of tweets per hour for #nfl is 515.984064
 
-The average number of followers of users for #nfl is 16035.015632
+The average number of followers of users for #nfl is 4289.746618
 
 The average number of retweet for #nfl is 1.538533
 
@@ -25,21 +25,21 @@ The average number of retweet for #nfl is 1.538533
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
 The average number of tweets per hour for #patriots is 975.523904
 
-The average number of followers of users for #patriots is 4969.570326
+The average number of followers of users for #patriots is 1650.321983
 
 The average number of retweet for #patriots is 1.782816
 
 >>> 
 The average number of tweets per hour for #sb49 is 1647.312749
 
-The average number of followers of users for #sb49 is 14389.183474
+The average number of followers of users for #sb49 is 2235.163680
 
 The average number of retweet for #sb49 is 2.511149
 
 >>> 
 = RESTART: /Users/YuLiqiang/Documents/Courses/EE-239AS/Project4/problem1.py =
-The average number of tweets per hour for #superbowl is 1402.044699
+The average number of tweets per hour for #superbowl is 2692.149701
 
-The average number of followers of users for #superbowl is 19474.000000
+The average number of followers of users for #superbowl is 3591.604474
 
-The average number of retweet for #superbowl is 0.000000
+The average number of retweet for #superbowl is 2.388272

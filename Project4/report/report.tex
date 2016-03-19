@@ -56,4 +56,80 @@ The data information is shown in table \ref{tb:data_information}. The distributi
 \caption{The histogram for \#NFL}
 \label{fig:nfl_hist}
 \end{figure}
+\section{Description of the emotion change : Sentiment Analysis}
+\subsection{Problem Statement}
+When we get access to millions of twitter contents, what we are often interested in is what did the users say and what were their emotions at that time. This leads to the sentiment analysis and can be beneficial for lots of areas. For instance, during the president election campaign, the candidates want to know what the people's reactions are towards their recent lecture or debate, which gives them instructions on how to improve it in the future.\\
+\\
+Therefore, we tried to detect the emotion changes from fans of both teams during and after the final game with the tweet data we have. That is, we want to know whether we can detect more happiness from tweets of patriots fans and more sadness from fans of hawks.
+\subsection{Data Preprocessing}
+We used the 'tweet' metadata in json files, which represents the contents of that tweet. However some preprocessing steps need to be done before making the sentiment analysis.The steps include:\\
+\begin{enumerate}
+\item Tokenize the tweet text, which includes making all letters lowercase, getting rid of stop words and punctuations, and tokenizing the text with regular expressions which match common words, hashtags, urls, user mentions and simple emotion symbols like ":)".
+\item Calculate the term frequency for each term appeared in the tweet contents.
+\item Calculate the term co-occurences for each term appeared in the tweet contents.
+\end{enumerate}
+\subsection{Pointwise Mutual Information}
+In this project, we define the Semantic Orientation(SO) of a word as the difference between its associations with positive and negative words. In practice, we want to calculate how close a word is with terms like \emph{good} and \emph{bad}. The chosen measure of closeness is Pointwise Mutual Information(PMI).\\
+\begin{equation*}
+PMI(t_1, t_2) = log\left( \frac{P(t_1\cap t_2)}{P(t_1)*P(t_2)}\right) 
+\end{equation*} 
+\\
+Then the SO of a word is calculated against positive and negative terms. Let's define $V^+$ a set of positive words and $V^-$ a set of negative words, the SO of a term is defined as 
+\begin{equation*}
+SO(t) = \sum_{t'\in V^+}PMI(t, t')-\sum_{t'\in V^-}PMI(t, t')
+\end{equation*}
+We define the Document Frequency(DF) of a term as the number of documents where the term occurs, so the probablities are defined as:
+\begin{equation*}
+\begin{split}
+&P(t) =\frac{DF(t)}{|D|}\\
+&P(t_1\cap t_2) = \frac{DF(t1\cap t2)}{|D|}
+\end{split}
+\end{equation*}
+\subsection{Results and Discussions}
+We choose to use \#gohawks and \#patriots as the support hashtag for two teams because the amount of data in \#gopatriots is too small. We split the data into one hour period and only consider the 24 hours around the game. We plot the semantic orientation every hour for the twitter contents from two teams fans and make the comparison. \\
+\\
+The results are shown in figure \ref{fig:emotion24}. From the figure we can see that at first seahawks fans are more confident than patriots fans, however there was a turning point at around  6:30pm, which is 3 hour after the game start. When we enlarge that area and show it in figure \ref{fig:emotion6}, we can see that after that turning point patriots fans are much happier than hawks fans. After referring it to the game facts, we think it makes sense because it describes a story of bouncing back from behind and win the championship. The table \ref{tb:game} shows the game facts. From the game facts, we can see that at 190 minutes, which is nearly 3 hours after the game start, the hawks lead the patriots by 24:14, however after that the hawks got no point anymore and the patriots turned back and won the superbowl. Therefore it explained why hawks fans started to feel unhappy at the time 3 hours after the game start and why patriots felt happy.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{emotion24.png}
+\caption{The emotion change during 24 hours}
+\label{fig:emotion24}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{emotion6.png}
+\caption{The emotion change from 2 hours to 8 hours after the game start  }
+\label{fig:emotion6}
+\end{figure}
+
+\begin{table}[hbp]
+\caption{Game facts for 2015 superbowl}
+\begin{center}
+\label{tb:game}
+\begin{tabular}{|c|c|}
+\hline
+Minutes after the game start & Scores(Patriots : Hawks)\\
+\hline
+88&7:0\\
+\hline
+105&7:7\\
+\hline
+120&14:7\\
+\hline
+130&14:14\\
+\hline
+175&14:17\\
+\hline
+190&14:24\\
+\hline
+227&21:24\\
+\hline
+243&28:24\\
+\hline
+END&28:24\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \end{document}

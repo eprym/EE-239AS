@@ -10,7 +10,7 @@ import datetime, time
 import numpy as np
 
 hashtag = ['gohawks', 'gopatriots', 'nfl', 'patriots', 'sb49', 'superbowl']
-data = np.zeros(shape=(519,28))
+data = np.zeros(shape=(519,5))
 start_date = datetime.datetime(2015,01,16, 12,0,0)
 end_date = datetime.datetime(2015,02,07, 03,0,0)
 day_start = datetime.datetime(2015,01,16, 0,0,0)
@@ -32,7 +32,7 @@ for i in range(len(hashtag)):
         data_update[1] += tweet['metrics']['citations']['total']  # number of retweets
         data_update[2] += tweet['author']['followers']  # number of followers
         data_update[3] = max(data_update[3], tweet['author']['followers'])  # max number of followers
-        data_update[4+(tweet['firstpost_date']-day_start_time)/3600%24] = 1
+        data_update[4] = (tweet['firstpost_date']-day_start_time)/3600%24 # time of date
         line = f.readline()
 
     np.savetxt('problem2_data_#%s' %hashtag[i], data)
